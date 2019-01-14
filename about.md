@@ -8,8 +8,9 @@ Some information about you!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+WE'RE A SMALL GROUP OF HACKERS & MAKERS
+We build electronic badges for security conferences for fun and no profit. Each badge is painstakingly designed and built with unique surprises and attention to detail. We are available for hire to design and build a badge for your next big event!
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[admin@badgepirates.com](mailto:admin@badgepirates.com)
