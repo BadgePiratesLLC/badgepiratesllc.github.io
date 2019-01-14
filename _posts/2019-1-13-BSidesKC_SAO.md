@@ -11,4 +11,4 @@ Lets see those SAO.
 
 Images:
 
-![SAO](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/SAO_1.PNG)
+![SAO](https://raw.githubusercontent.com/BadgePiratesLLC/BSidesKC19/master/SAO_1.PNG)
