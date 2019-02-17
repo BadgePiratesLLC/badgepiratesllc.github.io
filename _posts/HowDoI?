@@ -1,13 +1,14 @@
 This is quick How do I make a new post.
 
-Create new file
-Add Title Blocks at top:
+1. Create new file
+2. Add Title Blocks at top:
 ---
 layout: post
 title: BSidesKC 2019 SAO
 ---
-Name as date then title <YYYY-M-D-Title.md>
-Commit and then wait
+3. Name as date then title <YYYY-M-D-Title.md>
+  *note* - dont put the Date info in and it wont publish, so can be used as Drafts
+4. Commit and then wait
 
 
 To add a photo do
