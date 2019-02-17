@@ -13,7 +13,7 @@ First you need to do is give it power some how. We have provide 2 connectors in 
 
 VCC for this board is 3v so keep that in mind, we may have Battery Add-On Boards in the future as we develop this test platform more.
 
-So you ahve power now and it runs, very anti-Climatic right, well lets program it now.
+So you have power now and it runs, very anticlimactic right, well lets program it now.
 
 Using your IDE of Choice (Arduino IDE in this case) Pick your board as Generic 8266 12F.
 Connect your FTDI to GND, TX, and RX (we may make a FTDI add-on in the future)
@@ -25,7 +25,7 @@ Make sure to change it back to run after pushing.
 
 Now make some cool things, using the GPIO pins provided. May I suggest:
 
-1. our 6 LED CharliePlex board, CharliePlex will allow you to use many LED for few PINs. (Link)
+1. Our 6 LED CharliePlex board, CharliePlex will allow you to use many LED for few PINs. (Link)
 2. Maybe some NeoPixel LED (We have an Add-on for these too) (Link)
 3. Play around with WiFi from the Test code (Link)
 4. add any number of other Dev Boards to the GPIO and go to town.
