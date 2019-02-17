@@ -1,0 +1,33 @@
+---
+layout: post
+title: Badge Pirates 8266 Dev Board
+---
+
+So you have picked up one of our 8266 Dev Boards, congrats, we have sucked you into our addiction. Now lets get your programming that bad boy
+
+(Image of Dev Board)
+
+First you need to do is give it power some how. We have provide 2 connectors in the top left to connect power, I suggest putting a LiPo connector/battery on one of those and use the other later.
+
+(Image of Battery Connector)
+
+VCC for this board is 3v so keep that in mind, we may have Battery Add-On Boards in the future as we develop this test platform more.
+
+So you ahve power now and it runs, very anti-Climatic right, well lets program it now.
+
+Using your IDE of Choice (Arduino IDE in this case) Pick your board as Generic 8266 12F.
+Connect your FTDI to GND, TX, and RX (we may make a FTDI add-on in the future)
+Move the program switch from RUN to PROG
+Power it on
+Push your code (Test code may be found here (Test Code Link)
+
+Make sure to change it back to run after pushing.
+
+Now make some cool things, using the GPIO pins provided. May I suggest:
+
+1. our 6 LED CharliePlex board, CharliePlex will allow you to use many LED for few PINs. (Link)
+2. Maybe some NeoPixel LED (We have an Add-on for these too) (Link)
+3. Play around with WiFi from the Test code (Link)
+4. add any number of other Dev Boards to the GPIO and go to town.
+
+Happy Hacking
