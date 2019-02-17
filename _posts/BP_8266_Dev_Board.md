@@ -5,11 +5,11 @@ title: Badge Pirates 8266 Dev Board
 
 So you have picked up one of our 8266 Dev Boards, congrats, we have sucked you into our addiction. Now lets get your programming that bad boy
 
-(Image of Dev Board)
+![DevBoard](/images/8266_12F.JPG)
 
 First you need to do is give it power some how. We have provide 2 connectors in the top left to connect power, I suggest putting a LiPo connector/battery on one of those and use the other later.
 
-(Image of Battery Connector)
+![DevBoardBatt](/images/8266_12f_Batt.jpg)
 
 VCC for this board is 3v so keep that in mind, we may have Battery Add-On Boards in the future as we develop this test platform more.
 
@@ -17,17 +17,22 @@ So you have power now and it runs, very anticlimactic right, well lets program i
 
 Using your IDE of Choice (Arduino IDE in this case) Pick your board as Generic 8266 12F.
 Connect your FTDI to GND, TX, and RX (we may make a FTDI add-on in the future)
+![DevBoardJack](/images/8266_12f_Jack.jpg)
+
 Move the program switch from RUN to PROG
+![DevBoardProg](/images/8266_12f_Prog.jpg)
+
+
 Power it on
-Push your code (Test code may be found here (Test Code Link)
+Push your code (Test code may be found here (https://github.com/BadgePiratesLLC/BadgePirates_DevBoards/tree/master/Code/8266_Dev_Test)
 
 Make sure to change it back to run after pushing.
 
 Now make some cool things, using the GPIO pins provided. May I suggest:
 
-1. Our 6 LED CharliePlex board, CharliePlex will allow you to use many LED for few PINs. (Link)
-2. Maybe some NeoPixel LED (We have an Add-on for these too) (Link)
-3. Play around with WiFi from the Test code (Link)
+1. Our 6 LED CharliePlex board, CharliePlex will allow you to use many LED for few PINs. (link coming soon)
+2. Maybe some NeoPixel LED (We have an Add-on for these too) (link coming soon)
+3. Play around with WiFi from the Test code 
 4. add any number of other Dev Boards to the GPIO and go to town.
 
 Happy Hacking
