@@ -1,3 +1,8 @@
+---
+layout: post
+title: SAO version 2
+---
+
 If you have been to DefCon last year and picked up a Badge you will have noticed a 4 pin connector maybe labeled SAO or Shitty Add-On. This is a standard used by the #BadgeLife Community of Badge Makers to provide a standard for adding additional boards onto your Official or Un-Official Badges. Last years SAO connection was a simple 4 pin that allowed for VCC, GND, SCL and SDA (or better known as I2C Bus).
 
 ![SAO_v1](https://raw.githubusercontent.com/badgepiratesllc.github.io/images/Shitty_v1.png)
