@@ -5,9 +5,9 @@ title: BSidesKC 2019 Badges
 
 This year,  Kevin drew the short straw to give the talk about our badge for Bsides KC 2019.  Aptly titled [The Hardest Way to Present at a Conference](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/docs/BSidesKC_2019_Presentation.pptx) he explains a lot about the development process.
 
-<p align="center">
+
 ![Great Idea](/images/great-idea.jpg)
-</p>
+
 
 
 When developing the badge this year, we found the form long before the function.  I think its safe to say that where we typically struggle is figuring how how to make the badge look cool AF!  Given that the electronics badges were all reserved in 24 hours we feel like at least came close to achieving it!  This year we started with finding something that we could use to build on a theme and actually sets us up for next year!
@@ -20,9 +20,7 @@ While the Attendee badges were all assembled by our vendor PCBWay, the Organizer
 
 The Hardware
 
-<p align="center">
 ![The Badge](/images/bsides-badge.jpg)
-</p>
 
 The core of this years badge was the Espressif ESP8266 WIFI micro controller up from the ATTiny 85 from last year.  Beyond the passive components to support the microcontroller, we included 6 [confirm] reverse mount SMD LED’s that we could use for some bling.
 
@@ -50,23 +48,17 @@ Non Electronic participants were not left out either.  While the PCB was electri
 
 The solvers of the Crypto challenge received a specially designed “Challenge Accepted” contest SAO.  Only 2 of them were awarded during the Con to one person who solved the Crypto challenge and one who won the counterfeit badge challenge.
 
-<p align="center">
 ![Challenge Accepted SAO](/images/challenge-accepted-sao.jpg)
-</p>
 
 Pirates Badge
 
-<p align="center">
 ![Bsides Pirates Badge](images/bsides-pirates-badge.jpg)
-</p>
 
 One of the (few) benefits of designing a badge for a conference you will also be attending is getting to make your own ‘unofficial’ version of the badge.  This goes back to our roots in making unofficial DEFCON conference badges.  It’s hard to tell at first glance because the form is exactly the same although a different color scheme (Matte Black / Gold) and the illuminated text says ‘PIRATES’.
 
 We really wanted to give it some color, however there are currently no RGB reverse mount led’s which limit how much bling we can bring to the badge. However, quite by accident last year while building another project we ran across a solution using WS2812 or Neopixel LED’s.
 
-<p align="center">
 ![Experimentation](/images/bsides-kids-testing.mp4)
-</p>
 
 It turns out that RGB LEDs do look good from the backside (at least to us) but they are not mountable in reverse unless you do something like use blobs of solder or extra wires.  What we came up with was to use a daughter board to give us an easy way to mount them normally and then attach it to the backside of the badge.  This would still allow us to align them wherever we wanted the lighting and all with a profile stlll lower than the electrolytic capacitor on the badge or the battery holder.
 
@@ -80,9 +72,7 @@ Junior Hacker (Kids) Badge
 
 Just two weeks before Bsides KC 2018 we got an idea that it might be cool to have a separate badge for kids that attend given the Hakz4kids program however there wasn’t nearly enough time to make it happen.  Even so we started to brainstorm ideas that they would enjoy.  The answer that we came up with was ‘Laser Tag’.
 
-<p align="center">
 ![Experimentation](/images/bsides-shark-badge.jpg)
-</p>
 
 Of course, we had absolutely no idea how to make it happen and so the research began.  Fortunately we a year to do so...  To start with, we quickly figured out that Lasers are dangerous and thus probably not the right thing to put into the hands of our less experienced  hackers - mature/responsible adjectives intentionally unused.  Infrared (IR) however seemed to be a much better way to go.  There are certainly some trade offs as unless focused, IR is more scattershot like a shotgun than a laser rifle.  Another thing we had to face is that IR likes to bounce off of surfaces so you could just as easily hit someone by shooting off a wall.  Given that it was for kids in a small environment, we decided that we didn’t need to have incredibly strict standards and it could be a learning experience.
 
@@ -94,9 +84,7 @@ When researching the IR we found that we were going to need a way to drive the I
 
 As any good project, we started with the goal of allowing you to simply tag the other person but it quickly spiraled into never ending scope creep.  First, you have to have to have sound effects so we decided to integrate a speaker.  This is simple enough to just buy some Piezo’s and connect to a GPIO pin.  However, we learned that there is a difference between a Piezo buzzer and a Piezo speaker.
 
-<p align="center">
 ![Experimentation](/images/seckc-dc26-rgb-test.mp4)
-</p>
 
 Second, when messing around in the lab after getting badge to trigger a sound when you got hit, someone came up with the bright idea that it should have some force feedback.  We discovered that there are these simple vibrating motor disks that could be used.
 
@@ -106,9 +94,7 @@ Testing
 
 The biggest concern we had was that we could end up burning out the IR LED so we wanted to make sure that we tested it well.  This ended up being quite simple by putting to of the badge development platforms back to back, and making each one return fire when it got hit.  We left this ran for 24 hours and when we came back they had tagged each other over 300,000 times which we figured would probably exceed the mechanical life of pewpew button itself!
 
-<p align="center">
 ![Experimentation](/images/shark-badge-ir-test.jpg)
-</p>
 
 Lessons Learned
 
