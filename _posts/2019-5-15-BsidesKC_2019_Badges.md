@@ -8,7 +8,7 @@ This year,  Kevin drew the short straw to give the talk about our badge for Bsid
 
 ![Great Idea](/images/great-idea.jpg)
 
-
+##Background
 
 When developing the badge this year, we found the form long before the function.  I think its safe to say that where we typically struggle is figuring how how to make the badge look cool AF!  Given that the electronics badges were all reserved in 24 hours we feel like at least came close to achieving it!  This year we started with finding something that we could use to build on a theme and actually sets us up for next year!
 
