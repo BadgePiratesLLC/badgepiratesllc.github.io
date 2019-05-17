@@ -12,19 +12,19 @@ If you have never designed a custom electronics project, there are a lot of thin
 
 ### Background
 
-When developing the badge this year, we found the form long before the function.  I think its safe to say that where we typically struggle is figuring how how to make the badge look cool AF!  Given that the electronics badges were all reserved in 24 hours we feel like at least came close to achieving it!  This year we started with finding something that we could use to build on a theme and actually sets us up for next year!
+When developing the badge this year, we found the form long before the function.  I think its safe to say that where we typically struggle is figuring how to make the badge look cool AF!  Given that the electronics badges were all reserved in 24 hours we feel like at least came close to achieving it!  This year we started with finding something that we could use to build on a theme and actually sets us up for next year!
 
 Because electronic badges are expensive to build and to keep the cost of attending the conference low, not everyone is fortunate enough to get a badge.  This year, over 100 more people got electronic badges from last year including participants, speakers, volunteers and organizers.  Due to the fore mentioned cost issues, only 250 attendees were able to get electronic badges when preregistration was launched.  The limited stock was all reserved in 24 hours nearly 3 months before the conference.
 
 Part of the challenge in planning for badges is estimating the number of attendees.  This year the conference saw an increase from 500 to 700!  We once again ran out of even the bare PCB badges again this year because of last minute registrations far exceeding our expectations.
 
-While the Attendee badges were all assembled by our vendor PCBWay, the Organizer, Speaker and Jr Hacker badges totaling 128 (7 bit) were all hand assembled not including prototypes that number well over a dozen.
+While the Attendee badges were all assembled by our vendor PCBWay, the Organizer, Speaker, Volunteer and Jr Hacker badges totaling 128 (7 bit) were all hand assembled not including prototypes that number well over a dozen.
 
 ### The Hardware
 
 ![The Bsides Badge](/images/bsides-badge.jpg)
 
-The core of this years badge was the Espressif ESP8266 WIFI micro controller up from the ATTiny 85 from last year.  Beyond the passive components to support the microcontroller, we included 6 [confirm] reverse mount SMD LED’s that we could use for some bling.
+The core of this years badge was the Espressif ESP8266 WIFI micro controller up from the ATTiny 85 from last year.  Beyond the passive components to support the microcontroller, we included 6 reverse mount SMD LED’s that we could use for some bling.
 
 
 ### The Badge
