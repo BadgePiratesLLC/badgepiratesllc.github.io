@@ -50,7 +50,7 @@ Non Electronic participants were not left out either.  While the PCB was electri
 
 It's possible that we underestimated the resolve of some of the participants in the Crypto Challenge as it definitely drove some to the brink...
 
-[Crypto Challenge Drives them Crazy](/images/bsides-2019-crypto-challenge.jpg)
+![Crypto Challenge Drives them Crazy](/images/bsides-2019-crypto-challenge.jpg)
 
 The solvers of the Crypto challenge received a specially designed “Challenge Accepted” contest SAO.  Only 2 of them were awarded during the Con to one person who solved the Crypto challenge and one who won the counterfeit badge challenge.
 
