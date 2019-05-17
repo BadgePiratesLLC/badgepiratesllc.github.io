@@ -1,9 +1,11 @@
 ---
 layout: post
-title: All About the BSidesKC 2019 Badges
+title: All about the BSidesKC 2019 Badges
 ---
 
-This year,  Kevin drew the short straw to give the talk about our badge for Bsides KC 2019.  Aptly titled [The Hardest Way to Present at a Conference](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/docs/BSidesKC_2019_Presentation.pptx) he explains a lot about the development process.
+This year,  Kevin drew the short straw to give the talk about our badge for Bsides KC 2019.  Aptly titled [The Hardest Way to Present at a Conference](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/docs/BSidesKC_2019_Presentation.pptx) he explains a lot about the development process and why making a conference badge isn't (in itself) worth free admission!
+
+If you have never designed a custom electronics project, there are a lot of things that tend to pop up when going from a single prototype to a production run.  There is a good talk by [Kerry Scharfglass - @borgel](https://youtu.be/PUvh5-_HJJg) about the process and economics of building a badge.
 
 
 ![Great Idea](/images/great-idea.jpg)
@@ -12,11 +14,11 @@ This year,  Kevin drew the short straw to give the talk about our badge for Bsid
 
 When developing the badge this year, we found the form long before the function.  I think its safe to say that where we typically struggle is figuring how how to make the badge look cool AF!  Given that the electronics badges were all reserved in 24 hours we feel like at least came close to achieving it!  This year we started with finding something that we could use to build on a theme and actually sets us up for next year!
 
-Because electronic badges are expensive to build and to keep the cost of attending the conference low, not everyone is fortunate enough to get a badge.  This year, almost 100 more people got electronic badges from last year including participants, speakers, volunteers and organizers. [confirm with Kevin].   If you have never designed a custom electronics platform, there are a lot of things that pop up when going from a single prototype to a production run.  There is a good talk by [Kerry Scharfglass](https://youtu.be/PUvh5-_HJJg) about the process and economics of building a badge.  Due to the fore mentioned cost issues, only 300 [Kevin confirm] attendees were able to get electronic badges when preregistration was launched.  The limited stock was all reserved in under 24 hours almost 3 months [confirm] before the conference.
+Because electronic badges are expensive to build and to keep the cost of attending the conference low, not everyone is fortunate enough to get a badge.  This year, over 100 more people got electronic badges from last year including participants, speakers, volunteers and organizers.  Due to the fore mentioned cost issues, only 250 attendees were able to get electronic badges when preregistration was launched.  The limited stock was all reserved in 24 hours nearly 3 months before the conference.
 
 Part of the challenge in planning for badges is estimating the number of attendees.  This year the conference saw an increase from 500 to 700!  We once again ran out of even the bare PCB badges again this year because of last minute registrations far exceeding our expectations.
 
-While the Attendee badges were all assembled by our vendor PCBWay, the Organizer, Speaker and Jr Hacker badges totaling XXX were all hand assembled.
+While the Attendee badges were all assembled by our vendor PCBWay, the Organizer, Speaker and Jr Hacker badges totaling 128 (7 bit) were all hand assembled not including prototypes that number well over a dozen.
 
 ### The Hardware
 
@@ -52,9 +54,9 @@ The solvers of the Crypto challenge received a specially designed “Challenge A
 
 ### Pirates Badge
 
-![Bsides Pirates Badge](/images/bsides-pirates-badge.jpg)
-
 One of the (few) benefits of designing a badge for a conference you will also be attending is getting to make your own ‘unofficial’ version of the badge.  This goes back to our roots in making unofficial DEFCON conference badges.  It’s hard to tell at first glance because the form is exactly the same although a different color scheme (Matte Black / Gold) and the illuminated text says ‘PIRATES’.
+
+![Bsides Pirates Badge](/images/bsides-pirates-badge.jpg)
 
 We really wanted to give it some color, however there are currently no RGB reverse mount led’s which limit how much bling we can bring to the badge. However, quite by accident last year while building another project we ran across a solution using WS2812 or Neopixel LED’s.
 
@@ -84,7 +86,7 @@ When researching the IR we found that we were going to need a way to drive the I
 
 As any good project, we started with the goal of allowing you to simply tag the other person but it quickly spiraled into never ending scope creep.  First, you have to have to have sound effects so we decided to integrate a speaker.  This is simple enough to just buy some Piezo’s and connect to a GPIO pin.  However, we learned that there is a difference between a Piezo buzzer and a Piezo speaker.
 
-[Kids Badge Dev Board Testing](bsides-kids-testing.mp4)
+[Kids Badge Dev Board Testing](/images/bsides-kids-testing.mp4)
 
 Second, when messing around in the lab after getting badge to trigger a sound when you got hit, someone came up with the bright idea that it should have some force feedback.  We discovered that there are these simple vibrating motor disks that could be used.
 
