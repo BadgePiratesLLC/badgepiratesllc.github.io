@@ -40,6 +40,8 @@ There were 6 different designs for the badge, all of which had the same from but
 
 This badge was the first that we have used a trick to allow light to pass from the back of the PCB to the front.  We had actually looked into doing this last year for the SecKC Defcon 26 badge however it wouldn’t have worked with our design if we used the normal reverse mount LED’s.  The biggest challenge in using these LED’s is the cost.  Where a typical SMD LED costs 1-3 cents each, these can cost upwards of 30 cents each.
 
+One great thing about working with Bsides organizers is that they like us want to give back to the community.  To that end, all of the projects that we can are Open Source using either Creative Commons or MIT Licenses.  If you want to make your own badge or fork the project to make something different the hardware and software files are available on our [Github page](https://github.com/badgePiratesLLC/)
+
 ### The Game
 
 While we have used micro controllers in the past that have wireless capabilities, this badge was the first that we took advantage of them beyond just a passive way to broadcast snarky messages.  This years event was held for the first time at the Westport Plexpod facility and the layout was very different from past locations.  Working with the Bsides KC Team, we felt that we should try and use the badge as a way to get attendees to explore the venue as things were dispersed much more than last year.
