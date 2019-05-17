@@ -3,7 +3,7 @@ layout: post
 title: All about the BSidesKC 2019 Badges
 ---
 
-This year,  Kevin drew the short straw to give the talk about our badge for Bsides KC 2019.  Aptly titled [The Hardest Way to Present at a Conference](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/docs/BSidesKC_2019_Presentation.pptx) he explains a lot about the development process and why making a conference badge isn't (in itself) worth free admission!  This year, to up the difficulty level and take advantage of the fact that we had more than 2 months we created TWO badges.  We wanted something special for our growing youth attendees and it really seems to have paid off!
+This year,  Kevin drew the short straw to give the talk about our badge for Bsides KC 2019.  Aptly titled [The Hardest Way to Present at a Conference](https://github.com/BadgePiratesLLC/BSidesKC19/blob/master/docs/BSidesKC_2019_Presentation.pptx) he explains a lot about the development process and why making a conference badge isn't (in itself) worth free admission!  This year, to up the difficulty level and take advantage of the fact that we had more than 2 months we created TWO badges.  We wanted something special for our growing number of youth attendees and it really seems to have paid off!
 
 If you have never designed a custom electronics project, there are a lot of things that tend to pop up when going from a single prototype to a production run.  There is a good talk by [Kerry Scharfglass - @borgel](https://youtu.be/PUvh5-_HJJg) about the process and economics of building a badge.
 
@@ -108,6 +108,8 @@ Even though we ordered the components more than 50 days before the conference, t
 
 ### Lessons Learned
 
-Beyond the scope creep and component sourcing issues, the only real problem that we ran into this year during the conference was that of battery life.  We got a really good deal on some alkaline batteries but the quality turned out to be crap.  While a majority of badges didn’t made it through the con, some had to get a new set.  There were extras to be had however next year we will be doing battery tests to ensure they live up to our expectations.  Making Badges is so much more than an electronics project and has pushed our team to learn about all sorts of things that we had never even considered before.  Ready to order badges in February...Chinese New Year (delay 2 weeks).  Budgeted x amount for the project, tariffs slapped on imported electronics.  Plan, plan mor and plan agin has become the most important part of the project and we are getting much better at it!
+Beyond the scope creep and component sourcing issues, the only real problem that we ran into this year during the conference was that of battery life.  We got a really good deal on some alkaline batteries but the quality turned out to be crap.  While a majority of badges didn’t make it through the con, some had to get a new set (or three).  There were extras to be had however next year we will be doing battery tests to ensure they live up to our expectations.  
+
+Making Badges is so much more than an electronics project and has pushed our team to learn about all sorts of things that we had never even considered before.  Ready to order badges in February...Chinese New Year (delay 2 weeks).  Budgeted x amount for the project, tariffs slapped on imported electronics.  Plan, plan more and plan agin has become the most important part of the project and we are getting much better at it!
 
 Thank you all who stopped to tell us how much you enjoyed the badges, workshop and contests and we hope to see you all again next year!
