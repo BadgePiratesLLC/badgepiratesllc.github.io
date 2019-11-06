@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bsides CHS SAO Assembly
+title: Bsides Charleston SAO Assembly
 ---
 
 So you have acquired one of the Bsides Charleston Lock SAO's and discovered its just a kit and are wondering now what do you do?  Fear not, we have your back.  We will assume you have basic soldering skills.
@@ -23,6 +23,6 @@ The best way to install through hole LED's is to put the pins through and then s
 
 The final step is to solder on the SAO connector headers on both the badge and SAO as shown below keeping in mind the correct orientation as discussed before.
 
-![SAO LED Alignment](/images/bsideschs-2019-sao-header-solder-back)
+![SAO LED Alignment](/images/bsideschs-2019-sao-header-solder-back.jpg)
 ![SAO LED Alignment](/images/bsideschs-2019-badge-sao-header.jpg)
 ![SAO LED Alignment](/images/bsideschs-2019-sao-head-led-back.jpg)
