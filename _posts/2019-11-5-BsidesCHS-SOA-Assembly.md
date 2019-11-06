@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Bsides CHS SAO Assembly
