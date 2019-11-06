@@ -21,6 +21,8 @@ The best way to install through hole LED's is to put the pins through and then s
 
 ![SAO LED Alignment](/images/bsideschs-2019-sao-header-led-front.jpg)
 
+You can solder the pins of the LED on the front or backside of the PCB and it will not make any difference.
+
 The final step is to solder on the SAO connector headers on both the badge and SAO as shown below keeping in mind the correct orientation as discussed before.
 
 ![SAO LED Alignment](/images/bsideschs-2019-sao-header-solder-back.jpg)
