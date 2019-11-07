@@ -17,7 +17,7 @@ First up is the LED.  LED's have polarity (+/-) as earlier mentioned with the po
 
 ![SAO LED Alignment](/images/bsideschs-2019-sao-led-pinout.jpg)
 
-The best way to install through hole LED's is to put the pins through and then splay them out so that it stays in place while you solder it.
+The best way to install through hole LED's is to put the pins through and then splay them out so that it stays in place while you solder it.  You will want to bend the LED down so that the top of it stays close inside the circle to get the optimum effect (a bit higher than shown in the picture at the end).
 
 ![SAO LED Alignment](/images/bsideschs-2019-sao-header-led-front.jpg)
 
