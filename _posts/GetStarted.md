@@ -28,5 +28,7 @@ So, what should you have to get started? Let me break it down here:
 Now that you have the tools, start using them. And use them correctly. Practice, Practice, Practice (see below). 
 There are many learn to solder kits or solder kits out there, get them and get good. (https://www.tindie.com/products/BadgePirates/badgepirates-learn-to-solder-kit/)
 
+Watch for Part 2: Surface Mount Component Soldering
+
 
 ![SolderingIsEasy](/images/SolderingIsEasyCondensed.jpg)
