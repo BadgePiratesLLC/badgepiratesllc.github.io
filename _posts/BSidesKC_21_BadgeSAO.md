@@ -14,7 +14,7 @@ These connectors are the #BadgeLife equivelent of a standard for Prodcuing Rad A
 
 First off, yes SAO stands for Shitty Add-On, but to pc it up, it can be refered to as SAO or Standard Add-on ... you can add any polite S word you like, we will understand.
 
-So in a fully conifgured SAO connection you would have not only Power and Ground but other pin that would map to a badges IC2 pins for interactions. Ours for the BSidesKC21 Badge will only
+So in a fully conifgured SAO connection you would have not only Power and Ground but other pin that would map to a badges I2C pins for interactions. Ours for the BSidesKC21 Badge will only
 provide Power And Ground for simplicity (and chip shortages, Thanks Covid).
 
 So if you would like to make an SAO to go on the Badge, Feel free using this "Standard"
@@ -23,5 +23,5 @@ So if you would like to make an SAO to go on the Badge, Feel free using this "St
 
 Clear as Mud? Give me a holler on Twitter or email and I may be able to confuse you more @BadgePirates or fg@badgepirates.com or in the @SecKC Discord as @FG
 
-
+If you do come up with an SAO, bring it by the hardware hacker village at BSidesKC21 and show it off. Need help Soldering ... stop by, we may even have some components for you to finish off your SAO. 
 
