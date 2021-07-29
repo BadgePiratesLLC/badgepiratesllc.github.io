@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BSidesKC 2021 SAO 2021-7-28-BSidesKC_21_BadgeSAO.md
+title: BSidesKC21 SAO
 ---
 So you are going to BSidesKC 2021, and want a little insight into the mysterious SAO v1.69bis standard that everyone is talking about? <br>
 OR<br>
@@ -21,7 +21,11 @@ So if you would like to make an SAO to go on the Badge, Feel free using this "St
 
 ![Title](/images/v169bis.png)
 
-Clear as Mud? Give me a holler on Twitter or email and I may be able to confuse you more @BadgePirates or fg@badgepirates.com or in the @SecKC Discord as @FG
-
 If you do come up with an SAO, bring it by the hardware hacker village at BSidesKC21 and show it off. Need help Soldering ... stop by, we may even have some components for you to finish off your SAO. 
 
+
+Clear as Mud? Give me a holler on Twitter, email or SecKC Discord and I may be able to confuse you more:
+<br><br>
+![twitter](/images/twitter_.png) @BadgePirates<br>
+![email](/images/email_.png) fg@badgepirates.com<br>
+![discord](/images/discord_.png) @FG on SecKC Discord<br>
