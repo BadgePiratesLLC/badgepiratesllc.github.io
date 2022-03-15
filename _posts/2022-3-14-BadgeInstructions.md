@@ -1,3 +1,8 @@
+---
+layout: post
+title: BadgePirates2022 Badge Instructions
+---
+
 Want to connect to the BadgePirates2022 Badge?
 The one running the ESP32-S2-ROVER?
 
