@@ -1,3 +1,8 @@
+---
+layout: post
+title: BSidesKC 2019 SAO
+---
+
 ![Title](/images/BSides21_Badge.jpg)
 The Badge: This is actually pivot number 3 for the BSides KC 2021 Badge, with supply chain issues we attempted to pivot our original plan to a different BOM but still had
 issues with availability of parts so we had to come up with a "non-electronic" style badge. What we ended up with was the intention of having a Badge that you could
@@ -15,7 +20,6 @@ that we could with the supply chain woas of the year. The design allowed for up 
  
  Each SAO contained just the SAO connector and 2 Reverse mount (Gulwing) LED's. 
  
- <Pic>
  Additional SAO's: Along with the Con SAO's you may have seen a few special SAO's which included
  RF Village
  Sponsor - Wirex
@@ -30,7 +34,7 @@ that we could with the supply chain woas of the year. The design allowed for up 
  
   ![Title](/images/BSidesKC21_SAOBacks.jpg)
  The Game: As with most of the Badge Pirates projects, Yes .. there was a game associated with this one too. You may have noticed some simple code on the back of a
- few of the SAO's. Game Instructions here <URL> **Spoilers**
+ few of the SAO's. Game Instructions [here **Spoilers**](http://challenges.cryptochallenges.com/BC/2021/BSides21.html)
  
  Future: The current plan is in the future to provide addition year SAO's for Participant versions that you can display on your SAO display Badge. Keep an eye out.
  
