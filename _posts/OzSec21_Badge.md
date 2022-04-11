@@ -22,11 +22,11 @@ A Black Participant version was also handed out to the Challenge Winner (see bel
 ![Title](/images/OzSec21_Black.jpg)
 
 The Challenge: Within the Rainbow lines are hints to crypto that was implanted in the Badge.
-More info can be found at Game Instructions [here **Spoilers**](http://challenges.cryptochallenges.com/xxxxxx.html)
+More info can be found at Game Instructions [here **Spoilers**](http://challenges.cryptochallenges.com/BC/2021/OzSec21.html)
 
 <br>
 <br>
 
 GitHub Repository Link
-- Badge [Github page](http://challenges.cryptochallenges.com/BC/2021/OzSec21.html)
+- Badge [Github page](https://github.com/BadgePiratesLLC/Misc_OzSec_2021)
 <br>
