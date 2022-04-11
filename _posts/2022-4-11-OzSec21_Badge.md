@@ -4,7 +4,7 @@ title: OzSec 2021 Badge
 ---
 
 ![Title](/images/OzSec21.jpg)
-Badge: The OzSec21 Badge was an LED Badge that was designed for the Witchita OzSec Conference on Oct XX 2021.<br>
+Badge: The OzSec21 Badge was an LED Badge that was designed for the Witchita OzSec Conference on Oct 22nd 2021.<br>
 The Badge had the OzSec Logo and tied into the years theme of "Somewhere over the Rainbow table" over the Cityscape of Witchita KS.<br>
 The flame on the XXX Statue is back lit by a single reverse mount LED. The Badge also had an SAO Connector with just 3.3v and Gnd traced. <br>
 The badge was powered by a single CR2032 3.3v coin cell battery.
