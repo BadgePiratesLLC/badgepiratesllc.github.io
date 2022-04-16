@@ -1,4 +1,10 @@
+---
+layout: post
+title: LEDStrip Board / S2 Dev Board
+---
+
 a56d6d1b2c1c1e9491cd6898c4c388f2
+<br>
 LED Board/S2 Dev Board
 This project was a pet project of mine (fg). The problem I had was that around my house we had several
 of those really cheap LED strip lights, you know .. the ones that you find at Walmart for a few bucks (or on Ali). The problem
