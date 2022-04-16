@@ -1,3 +1,8 @@
+---
+layout: post
+title: Ghost Battery
+---
+
 64dabe657c7c9f3a273560d19d137afb
 aa2e2fb88deac58aa12323723c7971fd7286b2708092b45700f0c3c1257d829e
 .GHOST BATTERY
