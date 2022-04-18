@@ -3,7 +3,7 @@ layout: post
 title: LEDStrip Board / S2 Dev Board
 ---
 
-a56d6d1b2c1c1e9491cd6898c4c388f2
+<pic>
 <br>
 LED Board/S2 Dev Board
 This project was a pet project of mine (fg). The problem I had was that around my house we had several
@@ -28,14 +28,14 @@ auto setting and reboot for boot mode on the MCU (again for prototyping for our 
 Well .. all I can say is watch for newer version.
 
 .BOM
-Board
-ESP32-S2
-CN330
-USB Connector
-LDO 
-Caps and resisters
-On Off Switch
-Button for reset (may remove in future depending on testing)
+- Board
+- ESP32-S2
+- CN330
+- USB Connector
+- LDO 
+- Caps and resisters
+- On Off Switch
+- Button for reset (may remove in future depending on testing)
 
 <PIC>
 
