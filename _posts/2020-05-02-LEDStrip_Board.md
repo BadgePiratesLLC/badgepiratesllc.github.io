@@ -3,9 +3,9 @@ layout: post
 title: LEDStrip Board / S2 Dev Board
 ---
 
-<pic>
+![Title](/images/20220418_132749.jpg)
 <br>
-LED Board/S2 Dev Board
+.PROJECT TITLE: LED Board/S2 Dev Board<br>
 This project was a pet project of mine (fg). The problem I had was that around my house we had several
 of those really cheap LED strip lights, you know .. the ones that you find at Walmart for a few bucks (or on Ali). The problem
 with these cheap strips is that they usually only had an IR sensor and a remote where you could change the color or set a pattern.
@@ -22,8 +22,8 @@ Following that first version which I dont even think i have a picture of were qu
 which added a USB Serial chip, some additional GPIO for testing and several differnt button version trying to find one I was happy 
 with. I will not bore you with those pics as they really are just crap and I personally disliked. 
 
-.CURRENT VERSION
-v1.xxx kind of morphed into a dev board with full pinouts for playing around with and myself attempting some 
+.CURRENT VERSION <br>
+v1.4 kind of morphed into a dev board with full pinouts for playing around with and myself attempting some 
 auto setting and reboot for boot mode on the MCU (again for prototyping for our BP badges). Am I happy with what I currently have?
 Well .. all I can say is watch for newer version.
 
@@ -37,13 +37,14 @@ Well .. all I can say is watch for newer version.
 - On Off Switch
 - Button for reset (may remove in future depending on testing)
 
-<PIC>
-
 .CODE
-<Need to explain how the code works>
+- Code is coming soon to the GitHub Page
+<br>
 
 
 .LINK
-<Link to Github>
-<Link to Youtube>
-<Link to Tindie or Store>
+- GitHub [Github page](https://github.com/BadgePiratesLLC)
+- Youtube [YouTube Channel](https://www.youtube.com/channel/UCRVegJ2Y7m-8vIXnG0BIhyw/featured/) 
+- Tindie Store [Tindie Store](https://www.tindie.com/stores/badgepirates/)
+<br>
+
