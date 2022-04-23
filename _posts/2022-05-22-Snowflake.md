@@ -29,10 +29,10 @@ Unique with this is that 2 snowflake board can be joined together to make a 3d l
 <br>
 
 .BOM
-XX Led'S
-cr2032 battery
-CR2032 Holder
-On Off Switch
+- 12 Led'S
+- cr2032 battery
+- CR2032 Holder
+- On Off Switch
 
 .INSTRUCTIONS
 Inventory Components
