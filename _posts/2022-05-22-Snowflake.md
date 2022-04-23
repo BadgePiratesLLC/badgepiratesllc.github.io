@@ -2,7 +2,10 @@
 layout: post
 title: Snowflake LTS
 ---
-![Title](/images/xxxx.jpg) <br>
+![Title](/images/Snowflake_01.jpg)
+![Title](/images/Snowflake_02.jpg)
+![Title](/images/Snowflake_03.jpg)
+<br>
 .PROJECT TITLE: SNOWFLAKE LTS<br>
 This project was a pet project of myself (fg). I wanted to create a Learn to Solder kit (LTS) that BadgePirates could
 use as a basic and or advanced kit for use at conferences were we run Learn to Solder villages. I thought it would be cool to 
