@@ -3,7 +3,8 @@ layout: post
 title: LEDStrip Board / S2 Dev Board
 ---
 
-![Title](/images/20220418_132749.jpg)
+![Title](/images/LEDBoard_Front_sm.jpg)
+![Title](/images/LEDBoard_Back_sm.jpg)
 <br>
 .PROJECT TITLE: LED Board/S2 Dev Board<br>
 This project was a pet project of mine (fg). The problem I had was that around my house we had several
