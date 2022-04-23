@@ -3,7 +3,8 @@ layout: post
 title: Ghost Battery
 ---
 
-![Title](/images/xxxxxx.jpg)<br>
+![Title](/images/2032_Front.jpg)
+![Title](/images/2032_Back.jpg)<br>
 
 .PROJECT TITLE: GHOST BATTERY <br>
 The premise behind this is the create a way to power badges that by default use a CR2032 battery which is a common
