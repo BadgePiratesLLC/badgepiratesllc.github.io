@@ -3,7 +3,7 @@ layout: post
 title: USB to Serial Board
 ---
 
-![Title](/images/20220418_132732.jpg)
+![Title](/images/USB to Serial_sm.jpg)
 .PROJECT TITLE
 
 
