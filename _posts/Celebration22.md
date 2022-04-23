@@ -3,7 +3,7 @@ layout: post
 title: Celebration22
 ---
 
-![Title](/images/xxxx.jpg)
+![Title](/images/Grogu_font_01.jpg)
 .PROJECT TITLE
 
 
