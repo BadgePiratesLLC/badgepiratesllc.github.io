@@ -3,7 +3,7 @@ layout: post
 title: BSidesKC 2022 Badge
 ---
 
-![Title](/images/BSidesKC22_BadgeFront.JPG)
+![Title](/images/BSidesKC22_BadgeFront_sm.JPG)![Title](/images/BSidesKC22_BadgeBack_sm.JPG)<br><br>
 The Badge: <br>
 We finally had all the planets alighn, Covid is gone, Supply chain is slowely (very slowely) starting to move in a forward direction, which allowed us to re-visit our BSidesKC 2020 badge design. 
 <br>
@@ -31,7 +31,7 @@ Did you see all the different versions we had? No? Where here is the break down 
 <br>
 <br>
 
-![Title](/images/BSideskC22_BadgeVersions.jpg)
+![Title](/images/BSideskC22_Variants.PNG)
 <br>
 <br>
 
