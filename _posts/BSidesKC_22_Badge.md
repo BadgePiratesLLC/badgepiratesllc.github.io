@@ -31,7 +31,7 @@ Did you see all the different versions we had? No? Where here is the break down 
 <br>
 <br>
 
-![Title](/images/BSideskC22_Variants.PNG)
+![Title](/images/BSideskC22_Variants.png)
 <br>
 <br>
 
