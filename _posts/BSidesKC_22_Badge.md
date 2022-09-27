@@ -3,7 +3,7 @@ layout: post
 title: BSidesKC 2022 Badge
 ---
 
-![Title](/images/BSidesKC22_Badge.jpg)
+![Title](/images/BSidesKC22_BadgeFront.JPG)
 The Badge: <br>
 We finally had all the planets alighn, Covid is gone, Supply chain is slowely (very slowely) starting to move in a forward direction, which allowed us to re-visit our BSidesKC 2020 badge design. 
 <br>
