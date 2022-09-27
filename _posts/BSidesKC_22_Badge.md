@@ -44,10 +44,10 @@ This years Participant SAO was design from the T-Shit Graphic without any electo
 Additional SAO's: <br>
 Along with the Con SAO's you may have seen a few special SAO's which included
 - Solder Village Volunteers
-- Sponsor - xxx
-- Sponsor - xxx
-- Sponsor - xxx
-- Sponsor - xxx
+- Sponsor - Arista-TGS
+- Sponsor - Corelight
+- Sponsor - Red Canary
+- Sponsor - Tines
  <br>
  <br>
 
