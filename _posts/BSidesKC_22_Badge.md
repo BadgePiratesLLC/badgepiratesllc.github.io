@@ -14,7 +14,7 @@ The Hardware:
 - 14500 LIPO Battery
 - CH340N USB to Serial Programmer Chip
 - USB Micro Connector
-- xxxx LIPO Charger
+- LIPO Charger
 - 20 Reverse Gullwing Yellow LED
 - Misc Resisters, Caps and LDO, SPST Switch, Tactile Button x2, Power and Charging LED
 <br>
@@ -31,14 +31,15 @@ Did you see all the different versions we had? No? Where here is the break down 
 <br>
 <br>
 
-![Title](/images/BSideskC22_Variants.png)
+![Title](/images/BSidesKC22_Variants.png)
 <br>
 <br>
 
-![Title](/images/BSidesKC22_SAO.jpg)
+
 The SAO: <br>
 This years Participant SAO was design from the T-Shit Graphic without any electornics on it. We thought it looked awesome the way it was
 <br>
+![Title](/images/BSidesKC22_ParticipantSAO_sm.JPG)<br>
 <br>
 
 Additional SAO's: <br>
@@ -53,7 +54,7 @@ Along with the Con SAO's you may have seen a few special SAO's which included
 
 The Game: <br>
 As with most of the Badge Pirates projects, Yes .. there was a game associated with this one too. If you notice this badge was a Safe, so obviously (or maybe not so obvious) you will need to find or guess the combinations. 
-Game Instructions [here **Spoilers**](http://challenges.cryptochallenges.com/BC/2022/BSides22.html)
+Game Instructions [here **Spoilers**](https://github.com/BadgePiratesLLC/BSidesKC_2022//Docs/Codes.txt)
  <br>
  <br>
  
