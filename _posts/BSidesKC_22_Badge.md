@@ -20,7 +20,7 @@ Additional SAO's: Along with the Con SAO's you may have seen a few special SAO's
 - Sponsor - xxx
 - Sponsor - xxx
  
-![Title](/images/BSideKC21_SAOBacks.jpg)
+
 The Game: As with most of the Badge Pirates projects, Yes .. there was a game associated with this one too. xxxx
 Game Instructions [here **Spoilers**](http://challenges.cryptochallenges.com/BC/2022/BSides22.html)
  <br>
