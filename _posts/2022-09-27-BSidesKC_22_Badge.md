@@ -54,7 +54,7 @@ Along with the Con SAO's you may have seen a few special SAO's which included
 
 The Game: <br>
 As with most of the Badge Pirates projects, Yes .. there was a game associated with this one too. If you notice this badge was a Safe, so obviously (or maybe not so obvious) you will need to find or guess the combinations. 
-Game Instructions [here **Spoilers**](https://github.com/BadgePiratesLLC/BSidesKC_2022/Docs/Codes.txt)
+Game Instructions [here **Spoilers**](https://github.com/BadgePiratesLLC/BSidesKC_2022/blob/f7049c236ffc2253d1af427d7a516739096014d0/Docs/Codes.txt)
  <br>
  <br>
  
