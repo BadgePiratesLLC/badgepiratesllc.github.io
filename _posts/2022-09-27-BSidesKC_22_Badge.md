@@ -5,7 +5,7 @@ title: BSidesKC 2022 Badge
 
 ![Title](/images/BSidesKC22_BadgeFront_sm.JPG)![Title](/images/BSidesKC22_BadgeBack_sm.JPG)<br><br>
 The Badge: <br>
-We finally had all the planets alighn, Covid is gone, Supply chain is slowely (very slowely) starting to move in a forward direction, which allowed us to re-visit our BSidesKC 2020 badge design. 
+We finally had all the planets align, Covid is gone, Supply chain is slowely (very slowely) starting to move in a forward direction, which allowed us to re-visit our BSidesKC 2020 badge design. 
 <br>
 <br>
 
