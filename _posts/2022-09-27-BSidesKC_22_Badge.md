@@ -37,7 +37,7 @@ Did you see all the different versions we had? No? Where here is the break down 
 
 
 The SAO: <br>
-This years Participant SAO was design from the T-Shit Graphic without any electornics on it. We thought it looked awesome the way it was
+This years Participant SAO was design from the T-Shit Graphic without any electronics on it. We thought it looked awesome the way it was
 <br>
 ![Title](/images/BSidesKC22_ParticipantSAO_sm.JPG)<br>
 <br>
@@ -54,7 +54,7 @@ Along with the Con SAO's you may have seen a few special SAO's which included
 
 The Game: <br>
 As with most of the Badge Pirates projects, Yes .. there was a game associated with this one too. If you notice this badge was a Safe, so obviously (or maybe not so obvious) you will need to find or guess the combinations. 
-Game Instructions [here **Spoilers**](https://github.com/BadgePiratesLLC/BSidesKC_2022//Docs/Codes.txt)
+Game Instructions [here **Spoilers**](https://github.com/BadgePiratesLLC/BSidesKC_2022/Docs/Codes.txt)
  <br>
  <br>
  
