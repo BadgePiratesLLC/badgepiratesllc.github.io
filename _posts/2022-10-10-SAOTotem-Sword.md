@@ -3,7 +3,7 @@ layout: post
 title: SAO Totem Sword
 ---
 
-![Title](/images/SAOTotem-Sword_sm.png)<br>
+![Title](/images/SAOTotem-Sword_sm_2.png)<br>
 <br>
 .PROJECT TITLE<br>
 SOA Totem - Sword is our current SAO Totem for wearing, Displaying and Powering your SAO's. 
