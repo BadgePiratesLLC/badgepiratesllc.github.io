@@ -22,11 +22,13 @@ There were 3 different designs which we made as hand outs or trade durinig the 2
 - CR2032 SMD Battery Holder
 - 2 Through Hole Random Blinking LED's
 - Switch
+<br>
 2. Flashlight<br>
 - CR2032 Battery
 - CR2032 SMD Battery Holder
 - 2 Through Hole Random Blinking LED's
 - Switch
+<br>
 3. Mosquito<br>
 - CR2032 Battery
 - CR2032 SMD Battery Holder
