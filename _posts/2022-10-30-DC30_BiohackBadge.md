@@ -17,8 +17,8 @@ boards to allow the "cavities" to hold the "body parts" that you will be picking
 to trip the life hearts. 3 Strikes and you are out here.
 <br><br>
 .BOM<br>
-- 2 xxx IC
-- 1 xxx IC
+- 1 74HC4017D Counter IC
+- 1 74HC14 Hex Schmitt-Trigger Inverter
 - 3 reverse mount LED's
 - CR2450 Battery
 - CR2450 SMD Battery Holder
