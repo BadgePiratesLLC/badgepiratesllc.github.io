@@ -24,7 +24,7 @@ to trip the life hearts. 3 Strikes and you are out here.
 - CR2450 SMD Battery Holder
 - Switch
 - Power LED
-- <Various Resisters and Capacitors>
+- Various Resisters and Capacitors
 - Tweezers and connection wire
 - "Body Parts" Charms
 <br><br>
