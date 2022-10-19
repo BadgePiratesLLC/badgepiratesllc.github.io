@@ -3,8 +3,8 @@ layout: post
 title: Toor Camp Learn to Solder Kits
 ---
 
-![Title](/images/toor/1.png)(/images/toor/2.png)(/images/toor/3.png)(/images/toor/4.png)<br>
-(/images/toor/5.png)(/images/toor/6.png)(/images/toor/7.png)(/images/toor/8.png)<br>
+![Title](/images/toor/1.png)![Title](/images/toor/2.png)![Title](/images/toor/3.png)![Title](/images/toor/4.png)<br>
+![Title](/images/toor/5.png)![Title](/images/toor/6.png)![Title](/images/toor/7.png)![Title](/images/toor/8.png)<br>
 
 .PROJECT TITLE<br>
 ToorCamp Learn to Solder Kits / Handouts
