@@ -3,17 +3,19 @@ layout: post
 title: Toor Camp Learn to Solder Kits
 ---
 
-![Title](/images/toorlts_sm.png)<br>
+![Title](/images/toor/1.png)(/images/toor/2.png)(/images/toor/3.png)(/images/toor/4.png)<br>
+(/images/toor/5.png)(/images/toor/6.png)(/images/toor/7.png)(/images/toor/8.png)<br>
 
 .PROJECT TITLE<br>
 ToorCamp Learn to Solder Kits / Handouts
 <br>
 <br>
 .CURRENT VERSION<br>
-There were 3 different designs which we made as hand outs or trade durinig the 2022 ToorCamp weekend.
+There were 4 different designs which we made as hand outs or trade durinig the 2022 ToorCamp weekend.
 - Design1 - Toor Camp Sign
 - Design2 - Flashlight
 - Design3 - Mosquito
+- Design4 - Latern
 <br>
 <br>
 .BOM<br>
@@ -37,6 +39,14 @@ There were 3 different designs which we made as hand outs or trade durinig the 2
 - CR2032 SMD Battery Holder
 - 2 Through Hole Random Blinking LED's
 - Switch
+<br>
+4. Latern<br>
+
+- CR2032 Battery
+- CR2032 SMD Battery Holder
+- 2 Through Hole Random Blinking LED's
+- Switch
+<br>
 <br>
 <br>
 
