@@ -3,7 +3,7 @@ layout: post
 title: DefCon 30 Biohacking Village Badge
 ---
 
-![Title](/images/bh/bh_front_sm.png)<br>
+![Title](/images/biohack/bh_front_sm.png)<br>
 
 .PROJECT TITLE<br>
 Biohacking Village DefCon 30 Badge
