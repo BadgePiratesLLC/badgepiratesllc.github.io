@@ -23,7 +23,7 @@ As expected, we did run into the inevible supply chain issues throughout the p
 <br><br>
  
 .LINKS
-- GitHub [Github page](https://github.com/BadgePiratesLLC)
+- GitHub [Github page](https://github.com/BadgePiratesLLC/CactusCon_11)
 - Youtube [YouTube Channel](https://www.youtube.com/channel/UCRVegJ2Y7m-8vIXnG0BIhyw/featured/) 
 - Tindie Store [Tindie Store](https://www.tindie.com/stores/badgepirates/)
 <br>
