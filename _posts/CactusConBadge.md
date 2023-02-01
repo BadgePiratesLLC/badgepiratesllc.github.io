@@ -10,3 +10,11 @@ Access to the MCU can be done via the USB Connection through a USB to Serial (CH
 
 IV. Conclusions and Remarks<br>
 As expected, we did run into the inevible supply chain issues throughout the production of this badge, as we do with all of the other recent badges, but we were able to overcome them. We sincerely hope that you have as much pleasure in using it as we did in conceiving and constructing it. Special Thanks goes out to the entire CactusCon Crew and we hope to see you next year with another exciting badge.
+
+<br><br>
+ 
+.LINKS
+- GitHub [Github page](https://github.com/BadgePiratesLLC)
+- Youtube [YouTube Channel](https://www.youtube.com/channel/UCRVegJ2Y7m-8vIXnG0BIhyw/featured/) 
+- Tindie Store [Tindie Store](https://www.tindie.com/stores/badgepirates/)
+<br>
