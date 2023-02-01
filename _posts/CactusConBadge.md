@@ -3,7 +3,7 @@ layout: post
 title: CactusCon 11 Badge
 ---
 
-![Title](/images/CC11/CC11_Baadge_sm.png)<br>
+![Title](/images/CC11/CC11_Badge_sm.png)<br>
 <br>
 <br>
 
