@@ -1,3 +1,12 @@
+---
+layout: post
+title: CactusCon 11 Badge
+---
+
+![Title](/images/CC11/CC11_Baadge_sm.png)<br>
+<br>
+<br>
+
 I. Introduction <br>
 Now that you have the CactusCon 11 badge in your possession, you are probably wondering where you can find more information about its impressively crafted design. Allow me to reassure you that you have arrived to the correct location to find such information. This year's Badge was the result of a joint effort on the part of the Badge Pirate (that would be us) and the CactusCon personnel.
 
