@@ -25,11 +25,11 @@ The electronics design of the badge is centered around an Espressif ESP32-S2 WR
 
 Another benefit of the ESP32 is the shear number of General Purpose Input/Output (GPIO) pins built in.  The badge uses several of the GPIO pins to control
 
-o 2 4pin reverse-mount RGB LEDs (top windows) 
-o 3 indvidually addressable RGB Neopixels
-o 1 reverse-mount red LED ("not a camera" drone)
-o 5 input buttons
-o OLED (optional)
+* 2 4pin reverse-mount RGB LEDs (top windows) 
+* 3 indvidually addressable RGB Neopixels
+* 1 reverse-mount red LED ("not a camera" drone)
+* 5 input buttons
+* OLED (optional)
 
 Along with the built-in components, we have provided pin outs for the remaining GPIO pins. These pins could be used to add other components or functionality as you see fit. We have also provided a development board, which was available at the Hardware hacking village. So, go on and hack to your heart's content! 
 
