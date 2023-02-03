@@ -3,7 +3,7 @@ layout: post
 title: CactusCon 11 Badge (2023)
 ---
 
-![Title](/images/CC11/cactuscon-badge-staged.jpg)<br>
+![Title](/images/CC11/cactuscon-badge-staged_2.jpg)<br>
 <br>
 <br>
 
