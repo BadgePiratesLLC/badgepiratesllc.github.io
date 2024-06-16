@@ -2,6 +2,10 @@
 layout: post
 title: Our Go-To Hakko Soldering Irons for Precision and Reliability
 ---
+![Title](/images/irons.png)
+<br>
+<br>
+
 
 At Badge Pirates, our projects demand the highest levels of precision and reliability. Whether we're creating intricate badge designs or assembling custom electronics, the tools we use are critical to our success. That's why we've chosen Hakko soldering irons as our go-to equipment for all our soldering needs. In particular, we rely heavily on two models: the Hakko FX-888D and the Hakko FX-951.
 
