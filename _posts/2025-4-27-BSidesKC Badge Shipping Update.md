@@ -2,7 +2,7 @@ Updated: 4/27/2025
 
 Ahoy, Badge Pirates and BSidesKC Crew! 🏴‍☠️
 
-We wanted to share an important update regarding the BSidesKC 2024 Badge orders.
+We wanted to share an important update regarding the BSidesKC 2025 Badge orders.
 
 ⏳ Current Status:
 The badges are currently still held at U.S. Customs. We're actively working through the process, but unfortunately, the delay is outside of our control.
