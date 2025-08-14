@@ -1,4 +1,9 @@
-# Why ESP32 Rules the Badge World
+---
+layout: post
+title: Why ESP32 Rules the Badge World
+---
+
+![Title] # Why ESP32 Rules the Badge World
 
 > _This article is an opinion piece based on our experience at Badge Pirates. While there are many great microcontrollers out there, we’ve found the ESP32 to be the most capable and flexible platform for building electronic badges—and here’s why._
 

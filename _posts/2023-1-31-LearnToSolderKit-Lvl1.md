@@ -4,8 +4,7 @@ title: Learn To Solder Kit - Level 1
 ---
 
 ![Title](/images/lts/LTSKit-Lvl1_sm.png)<br>
-<br>
-<br>
+
 .PROJECT TITLE<br>
 Learn to Solder Kit - Level 1
 <br><br>
