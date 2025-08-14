@@ -3,7 +3,7 @@ layout: post
 title: BSidesKC Badges - Action Needed
 ---
 
-# 📢 BSidesKC Badge Delivery Update
+## 📢 BSidesKC Badge Delivery Update
 
 Ahoy, BSidesKC Attendees and Crew! 🏴‍☠️
 
