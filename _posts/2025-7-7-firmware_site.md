@@ -2,7 +2,7 @@
 layout: post
 title: Badge Pirates New Firmware Updater
 ---
-# How to Access and Use [firmware.badgepirates.com](http://firmware.badgepirates.com)
+### How to Access and Use [firmware.badgepirates.com](http://firmware.badgepirates.com)
 
 If you're holding a Badge Pirates creation and wondering *“How do I get the latest firmware on this thing?”* — we’ve got you covered.
 

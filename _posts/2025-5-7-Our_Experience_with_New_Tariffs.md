@@ -2,7 +2,7 @@
 layout: post
 title: BSidesKC Tariff Woahs
 ---
-# Behind the Scenes: What It Took to Get 250 Fully-Assembled ESP32 Badges
+### Behind the Scenes: What It Took to Get 250 Fully-Assembled ESP32 Badges
 
 We recently received a batch of 250 fully electronic badges from PCBWay... each built around an ESP32, complete with a 3.2" touch screen, Wi-Fi, and SD card slot. Overall, PCBWay handled the full assembly, which was a huge help.
 

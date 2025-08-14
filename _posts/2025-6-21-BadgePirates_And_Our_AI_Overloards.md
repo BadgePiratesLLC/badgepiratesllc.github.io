@@ -1,4 +1,9 @@
-# How Badge Pirates Uses AI (and Why It’s Not What You Think)
+---
+layout: post
+title: Badge Pirates and our AI Overlords
+---
+
+### How Badge Pirates Uses AI (and Why It’s Not What You Think)
 
 If you’ve been watching the AI buzz lately, you might think every company is run by robots these days. “AI-generated badges?!” Nah, that’s not quite how it works here.
 
