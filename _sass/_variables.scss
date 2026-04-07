@@ -1,23 +1,31 @@
 
 //
-// VARIABLES
+// VARIABLES — BadgePirates theme
 //
 
 // Colors
-$blue: #4183C4;
+$accent:      #00aaff;
+$accent-dim:  #0077bb;
+$accent-glow: rgba(0, 170, 255, 0.15);
+$gold:        #f0a500;
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+$bg-0:        #080808;
+$bg-1:        #0f0f0f;
+$bg-2:        #161616;
+$bg-3:        #1e1e1e;
+
+$text-0:      #ffffff;
+$text-1:      #cccccc;
+$text-2:      #888888;
+$border:      rgba(255, 255, 255, 0.07);
+
+// Legacy aliases (used in _highlights, _svg-icons)
+$black:       #000;
+$white:       #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$space-grotesk: 'Space Grotesk', sans-serif;
+$space-mono:    'Space Mono', monospace;
 
 // Mobile breakpoints
 @mixin mobile {

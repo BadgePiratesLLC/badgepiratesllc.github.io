@@ -1,13 +1,10 @@
 ---
 ---
 
-//
-// IMPORTS
-//
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
@@ -18,50 +15,42 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  background: $bg-0;
+  font: 18px/1.6 $space-grotesk;
+  color: $text-1;
 }
 
 .container {
   margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
+  padding: 0 20px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
+  font-family: $space-grotesk;
+  color: $text-0;
+  font-weight: 700;
+  line-height: 1.4;
   margin: 1em 0 15px;
   padding: 0;
 
   @include mobile {
-    line-height: 1.4;
+    line-height: 1.3;
   }
 }
 
 h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
+  font-size: 28px;
+  a { color: inherit; }
 }
 
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 20px;
-}
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
 
 h4 {
-  font-size: 18px;
-  color: $gray;
+  font-size: 16px;
+  color: $text-2;
 }
 
 p {
@@ -69,11 +58,12 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $accent;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
+  transition: color 0.2s ease;
   &:hover, &:active {
-    color: $blue;
+    color: lighten($accent, 15%);
   }
 }
 
@@ -82,168 +72,162 @@ ul, ol {
   padding-left: 30px;
 }
 
-ul {
-  list-style-type: disc;
-}
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
 
-ol {
-  list-style-type: decimal;
-}
+ol ul, ul ol, ul ul, ol ol { margin: 0; }
+ul ul, ol ul { list-style-type: circle; }
 
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
 
-ul ul, ol ul {
-  list-style-type: circle;
-}
+img { max-width: 100%; }
 
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
+.gmnoprint img { max-width: none; }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  font-family: $space-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: $text-2;
 }
 
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
+::-moz-selection { color: $text-0; background: $accent-dim; }
+::selection      { color: $text-0; background: $accent-dim; }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
+.clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
 
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
 
 //
-// .masthead
+// Header
 //
 
 .wrapper-masthead {
+  background: rgba(8, 8, 8, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   margin-bottom: 50px;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+.site-avatar {
+  width: 44px;
+  height: 44px;
+  margin-right: 14px;
+  flex-shrink: 0;
+
+  @include mobile {
+    margin-right: 0;
+  }
+
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    object-fit: contain;
+  }
+}
+
+.site-info {
+  flex: 1;
 
   @include mobile {
     text-align: center;
   }
 }
 
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
 .site-name {
   margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-family: $space-grotesk;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+
+  a {
+    color: $text-0;
+    &:hover { color: $accent; }
+
+    .accent { color: $accent; }
+  }
 }
 
 .site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
+  margin: 2px 0 0;
+  font-family: $space-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: $text-2;
+  text-transform: uppercase;
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
+  font-family: $space-grotesk;
+  font-size: 0.9rem;
 
   @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
   }
 
   a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+    margin-left: 24px;
+    color: $text-1;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+
+    &:hover { color: $accent; }
 
     @include mobile {
-      margin: 0 10px;
-      color: $blue;
+      margin: 0;
     }
   }
 }
 
 //
-// .main
+// Section tag (pill label)
+//
+
+.section-tag {
+  display: inline-block;
+  font-family: $space-mono;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $accent;
+  border: 1px solid $accent-dim;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+//
+// Posts
 //
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $border;
 }
 
 .posts > .post:last-child {
@@ -253,37 +237,46 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    margin: 1.8em 0.8em;
+    border-left: 3px solid $accent;
     padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
+    color: $text-2;
+    font-size: 1.1em;
     font-style: italic;
   }
 
-  .comments {
-    margin-top: 10px;
-  }
+  .comments { margin-top: 10px; }
 
   .read-more {
+    font-family: $space-mono;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 15px;
+    color: $accent;
+
+    &:hover { color: lighten($accent, 15%); }
   }
 }
+
+//
+// Footer
+//
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid $border;
+  background: $bg-1;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 24px 0;
   text-align: center;
+  font-family: $space-mono;
+  font-size: 0.72rem;
+  color: $text-2;
+  letter-spacing: 0.05em;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+// Syntax highlighting + icons
 @import "highlights";
 @import "svg-icons";
