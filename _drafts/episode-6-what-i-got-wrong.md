@@ -18,7 +18,7 @@ These are the moments where the agents broke in subtle, embarrassing, or instruc
 
 ### The JSDoc that took down Cortex
 
-- DevCC shipped a schedule-aware cron-health categorization commit
+- Dinesh shipped a schedule-aware cron-health categorization commit
 - The file had `*/2` and `*/5` literal cron expressions inside a `/** */` JSDoc block
 - The first `*/` prematurely closed the comment — Node parsed `→ 5 min grace` as code, threw `SyntaxError`, container went into restart loop
 - Cortex API down for ~12 hours overnight before I noticed
