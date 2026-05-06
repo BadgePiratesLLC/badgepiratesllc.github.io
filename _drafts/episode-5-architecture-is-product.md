@@ -25,6 +25,21 @@ This post is about the boring part. It's also the part nobody else seems to writ
 - **Plain-text git as the audit log.** Every commit is who-did-what-and-when. DevCC commits as a distinct git identity, MasterAI commits as another. `git log --author=DevCC` is the agent's diary.
 - **The "I am the architecture" reality.** When you're 1.5 humans, the architect IS the operator IS the user. There's no team to delegate "ops hygiene" to. Architecture choices that assume someone else will keep things tidy fail immediately.
 
+## The runtime: how seven Claude Code agents share one set of plumbing
+
+A reader who's tried to run more than one persistent AI agent has probably hit the wall I hit a year ago: the agents don't naturally share *anything*. Each is its own world. Different secret stores, different memory, different channels for input and output, different ways of crashing.
+
+The substrate that makes the BP fleet work is a runtime called OpenClaw. Each of our agents — Skippy, Dwight, Gilfoyle, DrJohnnyFever, DevCC, plus a manager-tier session — is a Claude Code instance running under OpenClaw's gateway. OpenClaw handles the boring-but-required stuff:
+
+- Routes Discord messages to the right agent based on channel and mention
+- Mediates secret access through a single CLI (`skippy-secret`), so no agent ever sees raw credentials in env vars or config files
+- Hosts each agent's persona file (its `SOUL.md` — voice, scope, do/don't list) and skill registry
+- Provides the "agent identity" that flows through git commits, Nexus tickets, and Cortex pulses
+
+In other words: Claude Code is the *engine* each agent runs on. OpenClaw is the *chassis*. Every agent in this series is built on that pair — they're not seven custom builds. They're seven Claude Code sessions wearing different uniforms, sharing one set of plumbing.
+
+Without that pair, the whole thing falls apart at three agents. With it, scaling from three to seven was mostly a matter of adding `SOUL.md` files and writing some skill prompts.
+
 ## The other meta-agent: the one that ships the code
 
 The trade-off you have to make running this many agents on a 1.5-person team is whether to *write* the code yourself or delegate that too. We delegated.
