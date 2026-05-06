@@ -31,7 +31,7 @@ This is the post about the queue.
 
 - A specific ticket arc: vuln_alerter → DevCC → Done, with timestamps. Probably one of the recent CVE tickets — search for "CVE" in Nexus, find one auto-closed by DevCC.
 - The `nexus_lib.mjs` exports — concrete API surface
-- Screenshot of the Nexus board (https://projects.bplabs.tech)
+- Screenshot of the Nexus board (anonymize URL bar before publishing)
 - The `AGENT_PROJECT_IDS` registry — agent-actionable projects pattern
 
 ## The worry: "but what if an agent goes rogue?"
