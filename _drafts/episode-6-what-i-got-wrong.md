@@ -57,7 +57,7 @@ These are the moments where the agents broke in subtle, embarrassing, or instruc
 ## The worry: "is this all worth it?"
 
 - Honest answer: yes, but only if you genuinely have a long tail of operational work that's costing you attention. If your inbox is already manageable and your infrastructure is one server, agents are a fun toy and you don't need them.
-- For a 1.5-person team running multiple product lines, multiple inboxes, a few dozen GitHub repos, and a handful of physical locations? The agents have given me back hours per week and surfaced opportunities that would have otherwise been lost.
+- For a 1.5-person team running multiple product lines, multiple inboxes, more than a hundred GitHub repos, and a handful of physical locations? The agents have given me back hours per week and surfaced opportunities that would have otherwise been lost.
 
 ## Receipts to pull (week-of)
 
