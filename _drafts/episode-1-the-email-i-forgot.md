@@ -12,7 +12,7 @@ It had been sitting in my Gmail since mid-February. Subject line, sender, four p
 
 I had not seen it.
 
-Not because I was hiding from it — I just never noticed. It landed during a week where I was buried in something else, and by the time the something else cleared, the email was forty-six newer messages deep. Then a hundred. Then a few hundred. Then it was March. Then it was April.
+Not because I was hiding from it — I just never noticed. It landed during our annual post-CactusCon coma — the two-week haze where we stagger home from the con with a tote of unsold inventory, a list of "I'll-follow-up-Monday" promises, and roughly zero appetite for inbox triage. By the time we surfaced, the email was forty-six newer messages deep. Then a hundred. Then a few hundred. Then it was March. Then it was April.
 
 Then a backlog grooming pass on my BadgePirates inboxes flagged it, the classifier promoted it from "long-tail noise" to "human reply candidate worth eyes," and a Discord notification dropped in front of me with a draft reply already written.
 
