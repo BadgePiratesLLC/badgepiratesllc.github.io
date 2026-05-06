@@ -56,7 +56,7 @@ I wrote a post on this blog [a year ago][1], half-joking, about my "AI overlords
 
 That's not where we are now.
 
-There are seven persistent agents running on our behalf around the clock now — inbox triage, finance reconciliation, IT health, CVE monitoring, music inventory, trip prep, and the long tail of small things that used to fall on the floor. The buried-email case is the most photogenic example of what they do, but it's not a one-off; it's a Tuesday.
+There are seven persistent agents running on our behalf around the clock now — inbox triage, finance reconciliation, IT health, CVE monitoring, music inventory, trip prep, and the long tail of small things that used to fall on the floor. There's also a development agent that writes and maintains most of the code the other seven run on — which is to say even the building is delegated. The buried-email case is the most photogenic example of what they do, but it's not a one-off; it's a Tuesday.
 
 The reason it tipped from "fun" to "necessary" wasn't the models. The models were good enough a year ago. What changed was the math. If we want BadgePirates to grow without doubling our hours or hiring someone we can't yet afford, something has to absorb the long tail of operational work. The badges, the customer conversations, the design decisions stay with us. Everything else is up for delegation.
 
