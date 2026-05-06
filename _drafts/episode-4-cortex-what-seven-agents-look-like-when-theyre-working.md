@@ -20,7 +20,7 @@ So we built Cortex.
 
 ## Key beats
 
-- **What Cortex is.** A self-hosted dashboard at `cortex.bplabs.tech` (Postgres + Caddy + a small API + a UI). Not a SaaS. Not a third-party agent observability product. A hundred lines of glue and three tabs that show me, at any moment: what's healthy, what's failing, what's stale, what just changed.
+- **What Cortex is.** A self-hosted dashboard. Postgres + Caddy + a small API + a UI, behind a Cloudflare Tunnel + Access. Not a SaaS. Not a third-party agent observability product. A hundred lines of glue and three tabs that show me, at any moment: what's healthy, what's failing, what's stale, what just changed.
 - **The four pulses every agent emits.**
   - `cron_runs` — every cron job posts its start, end, exit code, stdout/stderr tail
   - `health_checks` — current state per check (ok/warn/error/down) with schedule-aware staleness
