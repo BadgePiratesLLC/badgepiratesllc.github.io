@@ -25,6 +25,16 @@ This post is about the boring part. It's also the part nobody else seems to writ
 - **Plain-text git as the audit log.** Every commit is who-did-what-and-when. DevCC commits as a distinct git identity, MasterAI commits as another. `git log --author=DevCC` is the agent's diary.
 - **The "I am the architecture" reality.** When you're 1.5 humans, the architect IS the operator IS the user. There's no team to delegate "ops hygiene" to. Architecture choices that assume someone else will keep things tidy fail immediately.
 
+## The other meta-agent: the one that ships the code
+
+The trade-off you have to make running this many agents on a 1.5-person team is whether to *write* the code yourself or delegate that too. We delegated.
+
+Most of the agent code in the BadgePirates monorepo is written and maintained by what we call DevCC — a development agent that picks up tasks from the same Nexus board the operational agents share. Kevin or another agent files a ticket: "fix the cron-health logic to handle weekly cadence" or "add 3-attempt retry on SSH-via-curl flakes." DevCC reads the ticket, writes the code, opens a verifier-checked commit, and moves the ticket through the same columns any other agent would.
+
+That's the answer to the question every reader of this series will eventually ask: "but you must spend all day coding these." I don't. The dev agent does. My job is to know what needs to exist, not to write each line. The architecture in this post — the monorepo, the runbooks, the credential discipline — is what makes that delegation possible. You can't delegate engineering to an agent if you don't have a tidy system for it to plug into.
+
+What I still write by hand: design decisions, judgement calls on security trade-offs, occasional hot-fixes when something's on fire and the diagnostic loop needs human intuition. [PULL: rough % of commits in agent-repo by author — DevCC vs Manager CC vs Kevin direct.] The vast majority is DevCC.
+
 ## The worry: "but credential blast radius — what if an agent gets compromised?"
 
 - This is the right question and the most-likely-to-bite real risk.
