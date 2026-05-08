@@ -3,16 +3,56 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    {% comment %} Description: front-matter override > excerpt > site default {% endcomment %}
+    {% if page.description %}
+      {% assign meta_description = page.description %}
+    {% elsif page.excerpt %}
+      {% assign meta_description = page.excerpt | strip_html | strip_newlines | truncate: 200 %}
     {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
+      {% assign meta_description = site.description %}
     {% endif %}
-    <meta name="author" content="{{ site.name }}" />
 
+    {% comment %} Title: page > site {% endcomment %}
     {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
+      {% assign meta_title = page.title %}
+    {% else %}
+      {% assign meta_title = site.name %}
     {% endif %}
+
+    {% comment %} Image: front-matter override > site default {% endcomment %}
+    {% if page.image %}
+      {% assign meta_image = page.image | absolute_url %}
+    {% else %}
+      {% assign meta_image = '/images/BP_New.png' | absolute_url %}
+    {% endif %}
+
+    {% assign meta_url = page.url | absolute_url %}
+
+    {% if page.layout == 'post' %}
+      {% assign meta_type = 'article' %}
+    {% else %}
+      {% assign meta_type = 'website' %}
+    {% endif %}
+
+    <meta name="description" content="{{ meta_description }}" />
+    <meta name="author" content="{{ page.author | default: site.name }}" />
+    <link rel="canonical" href="{{ meta_url }}" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Discord, iMessage) -->
+    <meta property="og:type" content="{{ meta_type }}" />
+    <meta property="og:url" content="{{ meta_url }}" />
+    <meta property="og:title" content="{{ meta_title }}" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    <meta property="og:image" content="{{ meta_image }}" />
+    <meta property="og:site_name" content="BadgePirates" />
+    {% if page.layout == 'post' and page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    {% if page.author %}<meta property="article:author" content="{{ page.author }}" />{% endif %}
+    {% endif %}
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@badgepirates" />
+    <meta name="twitter:title" content="{{ meta_title }}" />
+    <meta name="twitter:description" content="{{ meta_description }}" />
+    <meta name="twitter:image" content="{{ meta_image }}" />
