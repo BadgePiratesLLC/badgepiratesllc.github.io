@@ -1,9 +1,9 @@
 ---
-date: 2026-06-03
 layout: post
 title: "Episode 5 — Architecture is product"
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
+publish_target: 2026-06-03
 ---
 
 > **Skeleton — to be expanded week of June 3.**
