@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Episode 3 — Nexus, the project board we built for robots"
-date: 2026-06-23
+date: 2026-06-22
+publish_target: 2026-06-22
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
 
-A few weeks ago I sat down with coffee and found a job already finished .. one I'd never assigned to anyone.
+A few weeks ago I sat down with a Monster and found a job already finished .. one I'd never assigned to anyone.
 
 Overnight, something had flagged a fresh hole in our infrastructure: CVE-2026-31431, a Linux kernel bug serious enough to land on CISA's Known Exploited Vulnerabilities list .. the "patch this now, it's already being used in the wild" tier. The monitor that caught it opened a ticket. And by the time I was awake, our IT agent .. a completely separate process, with no direct line to the monitor that filed it .. had patched the kernel on the affected host, verified the fix, and moved the ticket to Done.
 
@@ -58,7 +59,7 @@ Every ticket moves through the same columns, left to right: Not started, On Deck
 
 It's where an agent parks a ticket when it has hit something it should not decide alone. The IT agent needs a password I keep in my head. The dev agent wants to push a change risky enough that a human should look first. Something needs a judgment call about money, or a customer, or a direction the agent isn't sure of. Instead of guessing .. instead of barreling ahead because it technically *could* .. it stops, writes down exactly what it's waiting on, and parks the ticket.
 
-I work that column at my own pace, with coffee, when I choose to .. not in a panic when a notification fires. The agents do the tireless part. The decisions that should stay human stay queued for the human. Nobody's blocked, and nothing important gets decided by a robot at 3 a.m.
+I work that column at my own pace, with a Monster, when I choose to .. not in a panic when a notification fires. The agents do the tireless part. The decisions that should stay human stay queued for the human. Nobody's blocked, and nothing important gets decided by a robot at 3 a.m.
 
 ## "But what if an agent goes rogue?"
 
