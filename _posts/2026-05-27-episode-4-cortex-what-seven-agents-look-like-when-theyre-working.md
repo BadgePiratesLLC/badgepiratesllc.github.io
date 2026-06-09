@@ -1,9 +1,9 @@
 ---
+date: 2026-05-27
 layout: post
 title: "Episode 4 — Cortex, what seven agents look like when they're working"
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
-publish_target: 2026-05-27
 ---
 
 > **Skeleton — to be expanded week of May 27.**
