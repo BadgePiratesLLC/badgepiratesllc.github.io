@@ -1,0 +1,35 @@
+name: auto-publish-drafts
+on:
+  schedule:
+    - cron: '0 13 * * *'   # daily 13:00 UTC (~8am Central) — checks for drafts whose publish_target has arrived
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Promote drafts whose publish_target has arrived
+        run: node .github/scripts/promote-drafts.mjs
+      - name: Commit & push if anything was promoted
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "badgepirates-autopublish[bot]"
+            git config user.email "autopublish@badgepirates.com"
+            git add -A
+            git commit -m "Auto-publish: promote scheduled draft(s) to _posts"
+            git push
+            echo "PROMOTED=1" >> "$GITHUB_ENV"
+          else
+            echo "No drafts due today."
+          fi
+      - name: Request a Pages rebuild (belt-and-suspenders)
+        if: env.PROMOTED == '1'
+        continue-on-error: true
+        run: gh api -X POST repos/${{ github.repository }}/pages/builds
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
