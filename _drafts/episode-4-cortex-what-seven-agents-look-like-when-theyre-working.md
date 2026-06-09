@@ -19,7 +19,7 @@ So we built Cortex. This is the post about how I watch the watchers.
 
 ## What Cortex actually is
 
-Cortex is a dashboard. That's it, and I want to undersell it on purpose, because the lesson here is how little it took.
+Cortex is a dashboard. That's it, and I want to undersell it on purpose, because the lesson here is how little it took to start.
 
 Underneath, it's a small database, a thin API, and a web page, sitting on a cheap rented server behind a Cloudflare tunnel so it has no public address and asks for a login before it shows you anything. No SaaS subscription. No third-party "agent observability platform." A few hundred lines of glue and a handful of tabs that answer four questions at a glance: what's healthy, what's failing, what's gone stale, and what just changed.
 
@@ -38,23 +38,39 @@ There are four kinds.
 
 That second bullet .. *when it last reported* .. is the whole trick. The original sin of monitoring is checking whether things are erroring and forgetting to check whether they're reporting at all. A cron that dies doesn't error. It just goes quiet. Cortex is built to treat silence as a signal.
 
-## The watcher
+## But the agents read it too
 
-Here's the piece of this that runs every hour without me. Same rule as the other episodes: when an agent can describe its own job better than I can, I give it the keyboard.
+Here's the part the word "dashboard" gets wrong. A dashboard sounds like a thing a human stares at. For the first month, that's all Cortex was .. a wall I checked. The version that actually matters is the one where the agents read it too.
 
-> Once an hour I do one small, dumb, important thing. I look at a fixed set of the most critical checks — the ones that, if they're down, mean something real is broken — and I ask whether the picture has changed since last time. Not whether anything is broken in the abstract. Whether it *just became* broken, or *just got fixed*.
+Episode 3 was about the board where the agents *act* .. where they claim tickets and do the work. Cortex is how they *see*. The interesting thing is what happens where those two meet.
+
+Once an hour, an agent whose entire job is to watch reads the most critical rows in Cortex and asks one question: did anything just change? Not "is anything broken," but "did something *just become* broken, or just get fixed, since I last looked." When the answer is yes, it doesn't ping me. It opens a ticket on the board .. the same board from last episode .. and hands it to the manager agent, with exactly what flipped and when. From there the mesh takes over: the manager triages it, routes it to whichever agent owns that kind of problem, that agent fixes the thing, the fix changes the underlying pulse, Cortex goes green, and the watcher quietly closes its own ticket on the way back down.
+
+I'm not anywhere in that loop. A red light becomes a ticket becomes a fix becomes a green light, and the first I hear of it might be reading the closed ticket later. The dashboard isn't where the story ends. It's the sensor that starts it.
+
+Same rule as the other episodes: when an agent can describe its own job better than I can, I give it the keyboard.
+
+> Once an hour I do one small, dumb, important thing. I look at a fixed set of the most critical checks — the ones that, if they're down, mean something is actually on fire — and I ask whether the picture changed since last time. Not whether anything is broken in the abstract. Whether it *just became* broken, or *just got fixed*.
 >
-> If nothing flipped, I do nothing. That's the part that took discipline to get right — a watcher that announces "still fine!" every hour is a watcher you start ignoring by Tuesday. So I stay silent unless the world actually changed.
+> If nothing flipped, I do nothing. That's the part that took discipline to get right — a watcher that says "still fine!" every hour is one you stop reading by Tuesday. So I stay quiet unless the world actually changed.
 >
-> When something does flip from green to red, I open a ticket on the board, hand it to the manager, and say exactly what changed and when. When it flips back, I note that too, and close my own thread. I'm not the one who fixes anything. I'm the one who makes sure a human finds out — once, clearly, at the moment it matters — and never gets cried wolf to in between.
+> When something does flip the wrong way, I don't try to fix it myself; that's not my job and I'm not good at it. I open a ticket on the board and hand it to the manager with exactly what changed and when. The manager routes it to whoever owns that kind of problem. When it flips back to green, I find my own ticket and close it. I'm the trip wire. Someone else is the worker.
 >
 > — the watcher
 
-## What I actually look at
+## And lately, I can just ask it
 
-In the morning it's the changes feed. Thirty seconds. Anything that errored, warned, or went stale overnight is right there, newest first, and nothing that stayed green is .. because I don't need to be told the things that are fine.
+That's the loop the agents run on their own. The other half of the upgrade since I first sketched this post is the half I run: I can talk to it.
 
-During the day I don't open the dashboard at all. I have a one-word command in my terminal that pulls the same picture and, better, sorts the real problems from the noise. Half the "failures" on any given day are a model being slow, or a network blip, or a check that's flaky for reasons that don't matter. The command knows the difference between "this has failed once and will probably clear itself" and "this has failed every run for six hours and you need to care." That sorting is the difference between a dashboard I'd check and a dashboard I'd learn to ignore.
+There's a chat box now. It lives behind the same login as the rest of Cortex, and on my phone it behaves like texting a very well-informed coworker. I type "is the newsletter job healthy?" and I get a straight answer, because on the other end is the manager agent .. the same one that grooms the board .. reading the live state and replying in a sentence. But it doesn't stop at answers. "Restart the music sync." "File a ticket to look at that cert." "What changed on the network today?" If it's a quick, safe thing, it just does it and tells me what happened. If it's bigger, it makes a ticket and says so.
+
+This is the part that still feels slightly unreal. I can be standing in a parking lot, text a question at my own infrastructure, and have it both answer *and* go do something about it .. the same agent that would have handled it from the board, just reachable through a chat bubble instead. The dashboard stopped being a thing I look at and became a thing I can ask.
+
+## The thirty seconds, and the noise
+
+For all that, the morning ritual is still me and the changes feed for about thirty seconds .. everything that errored, warned, or went stale overnight, newest first, nothing that stayed green, because I don't need to be told the things that are fine.
+
+During the day I lean on a one-word command in my terminal that pulls the same picture and sorts the real problems from the noise. Half the "failures" on any given day are a model being slow, or a network blip, or a check that's flaky for reasons that don't matter. The command knows the difference between "this failed once and will probably clear itself" and "this has failed every run for six hours and you need to care." That sorting is the whole reason I trust the green instead of learning to ignore it.
 
 ## The time it earned its keep
 
@@ -80,7 +96,7 @@ It's the right question, and it's the same instinct as "what if an agent goes ro
 
 Two answers.
 
-First, you can't get to it. Cortex has no public address. It sits behind a tunnel and demands a login before it shows a single row. The agents that feed it can only write, never read .. they push their pulses through a key that lets them add a row and nothing else. There's no admin panel hanging off the open internet waiting to be guessed at.
+First, you can't get to it. Cortex has no public address. Everything that can see the whole picture .. the dashboard, the chat box, the read API .. sits behind a tunnel and a login. The push agents that feed it are the one exception, and they're the *least* dangerous one: each holds a key that can only add a row, never read one. So the parts that can see everything require me to be me, and the parts that run unattended out in the world can't see anything.
 
 Second, even if someone got in, the cupboard is deliberately bare. Cortex holds health, runs, and inventory. It holds no passwords, no customer data, no keys to anything. The worst case is someone learns my server is a little behind on a patch .. which is exactly the kind of thing I built the dashboard to make sure *I* learn first. The only person the information on that board is useful to is the person trying to keep it green.
 
@@ -88,9 +104,9 @@ Backups run nightly, encrypted, off-site. If the whole thing burned down I'd hav
 
 ## 
 
-If Episode 3 was the agents talking to each other through a shared board, this is the part where I get to listen in .. one page that turns "I hope everything's running" into "I can see that everything's running, and here's the one thing that isn't."
+Episode 3 was the board where the agents act. This one was the nervous system underneath it .. the thing that notices, the thing that turns a light going red into a ticket going onto the board, and lately the thing I can just ask.
 
-There's a thread running under all four of these posts that I've been dancing around. Each piece .. the inbox watcher, the board, the dashboard .. I built for myself, for this business, and each one keeps turning out to be the sort of thing someone else could run too. That's not luck. Next time I want to talk about it head-on: how a team of one-and-a-half humans keeps all of this from collapsing under its own weight, and why "build it so the next person could run it" is the only rule that's kept me sane.
+There's a thread running under all four of these posts that I've been circling. Each piece .. the inbox watcher, the board, the dashboard .. I built for myself, for this one small business, and each one keeps turning out to be the kind of thing someone else could run too. That's not luck. Next time I want to say it out loud: how a team of one-and-a-half humans keeps all of this from collapsing under its own weight, and why "build it so the next person could run it" is the only rule that's kept me sane.
 
 If you want that post when it lands, the [BadgePirates newsletter][3] is how I announce them .. monthly, with the new writing and whatever we're shipping. The [Discord][2] is where the running commentary lives in between.
 
