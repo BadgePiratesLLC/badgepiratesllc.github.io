@@ -1,7 +1,7 @@
 name: auto-publish-drafts
 on:
   schedule:
-    - cron: '0 13 * * *'   # daily 13:00 UTC (~8am Central) — checks for drafts whose publish_target has arrived
+    - cron: '0 13 * * *'   # daily 13:00 UTC (~8am Central) — promotes drafts whose publish_on has arrived
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
-      - name: Promote drafts whose publish_target has arrived
+      - name: Promote drafts whose publish_on has arrived
         run: node .github/scripts/promote-drafts.mjs
       - name: Commit & push if anything was promoted
         run: |
