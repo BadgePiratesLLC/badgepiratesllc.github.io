@@ -1,74 +1,71 @@
 ---
 layout: post
 title: "Episode 6 — What I got wrong"
+date: 2026-08-03
+publish_on: 2026-08-03
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
-publish_target: 2026-06-10
 ---
 
-> **Skeleton — to be expanded week of June 10.**
+If the first five posts in this series read like everything works, that's because I edited them carefully. This one is the cutting-room floor.
 
-## Hook (working draft)
+These are the times the agents broke .. in small, dumb, occasionally expensive ways. I'm including them because if you're thinking about building anything like this for your own business, the failure you should plan for is not the one in the headlines. It isn't a rogue AI plotting against you. It's a comment that closed one character too early. The boring stuff breaks in boring ways, and that's the honest part nobody puts in the demo.
 
-If the first five posts in this series read like everything works, that's because I edited carefully. This post is the cutting-room floor.
+## The comment that took down the dashboard
 
-These are the moments where the agents broke in subtle, embarrassing, or instructive ways. I'm including them not because failure makes for a great closer (it does), but because anyone considering building something like this for their own small business should know what the failure modes actually look like — not the neat "AI hallucinates" boogeymen, the actual mundane ones.
+The development agent shipped a perfectly reasonable change to the monitoring code .. the logic that decides whether a cron job is healthy or has gone stale. Good change. It passed its review. It went live.
 
-## Key beats — pick the strongest 3-4
+Buried in that file, inside a block of explanatory comment text, were a couple of literal cron expressions written out as examples. One of them contained the exact two characters that mean "end of comment." So halfway through what was supposed to be a harmless note, the comment silently ended, and the rest of the note .. now treated as code .. was nonsense. The program refused to start. The container it lived in tried to restart, hit the same wall, and fell into a loop, over and over, all night.
 
-### The JSDoc that took down Cortex
+The dashboard whose entire job is to tell me when things are down was, itself, down. For about twelve hours, overnight, before I saw it in the morning. The fix took two minutes once I understood it: space the example out so it can't masquerade as a real end-of-comment. The lesson took longer to sit with. Your comments are not safely inert. To the machine, a comment is just code that's agreed to stay quiet .. and it only stays quiet if every character cooperates.
 
-- Dinesh shipped a schedule-aware cron-health categorization commit
-- The file had `*/2` and `*/5` literal cron expressions inside a `/** */` JSDoc block
-- The first `*/` prematurely closed the comment — Node parsed `→ 5 min grace` as code, threw `SyntaxError`, container went into restart loop
-- Cortex API down for ~12 hours overnight before I noticed
-- Hot-fix: space out the literals (`* /2`, `* /5`), rebuild + restart
-- Lesson: comment syntax is code. Linters that catch unclosed-comment errors should be in CI.
+## The email addressed to the wrong four people
 
-### The hallucinated email draft
+A customer wrote in following up on an order from the year before. The drafting agent did exactly what I'd asked it to: it pulled in the history on the thread to write a warm, context-aware reply.
 
-- A customer wrote in February following up on an unfulfilled badge from the prior year
-- The AI drafter pulled in the *prior thread context* — a year-ago batch-coordination email with totally different participants — and addressed the new draft to "Derek/Aaron/Eric/Teagan"
-- I caught it before sending only because the names were obviously wrong
-- Fixed by tightening the prompt: latest message is the explicit reply target, prior thread is *context only*, hard rule against addressing names from older messages
-- Lesson: LLMs blend context that humans naturally compartmentalize. The fix is structural in the prompt, not retraining.
+The trouble is it pulled in *too much* history. Tangled into the older context was a long-finished coordination email from a completely different batch, with completely different people on it. The agent, helpfully, blended them. The draft it handed me to send was addressed by name to four people who had nothing whatsoever to do with this customer or this order.
 
-### The opendirectoryd CPU loop I'm still chasing
+I caught it before it sent, but only because the names were so obviously wrong they jumped off the screen. That's not a safety net. That's luck. The real fix was structural: rewrite the agent's instructions so the latest message is the one and only reply target, the rest of the thread is *context to understand and nothing more*, and addressing anyone named in an older message is forbidden outright. The lesson is one of the most useful things this whole project has taught me about working with these models: they blend context that a human would instinctively keep in separate boxes. You don't fix that by hoping for a smarter model. You fix it by building the boxes yourself, in the instructions.
 
-- AgentMini's macOS opendirectoryd process pinning 60-130% CPU sustained, dragging automountd + log + diagnosticd along
-- HUP doesn't fix it (just reloads config). Kill+respawn works briefly, then the same trigger re-pins it
-- Root cause: still not fully diagnosed. Authentication failures from somewhere are being processed in a tight loop with automountd hammering opendirectoryd for credential lookups
-- Current state: a watchdog cron auto-kills opendirectoryd when CPU >50%, which is a band-aid, not a fix
-- Lesson: not every loud problem has a clean root cause. Sometimes the right answer is "automate the recovery while you keep digging."
+## The CPU loop I still haven't beaten
 
-### The launchctl restart race
+Not every story in here has a clean ending. This one doesn't.
 
-- Updater for openclaw used `bootout` then `bootstrap` to restart the gateway service
-- `bootout` returns before the unload finishes, so `bootstrap` finds the label still loaded and fails with "Bootstrap failed: 5: Input/output error"
-- Auto-rollback fired, gateway stayed on old version
-- Fix: use `launchctl kickstart -k` instead, which atomically restarts a running service
-- Lesson: macOS launchd APIs have race conditions in their composition. Read the man page, don't infer.
+One of my machines has a system process .. part of how macOS handles logins and credentials .. that periodically pins the processor at full tilt and drags a couple of related processes down with it. Politely asking it to reload does nothing. Killing it works for a few minutes, and then whatever sets it off sets it off again, and it climbs right back. The honest truth is I still haven't fully nailed the root cause. Something is failing an authentication check in a tight loop, and the machine is grinding itself trying to service it.
 
-## What these have in common
+What I have, for now, is a watchdog .. a small script that watches the runaway process and kills it whenever it crosses a line, buying the machine back its breathing room. That is a band-aid and I know it's a band-aid. But it's an honest one, and it points at a real lesson: not every loud problem has a clean root cause waiting to be found this week. Sometimes the responsible move is to automate the recovery so the thing stays usable, write down that the real fix is still open, and keep digging when you can. Pretending it's solved would be the actual failure.
 
-- None of them were the *AI* failing. The AI was correct in the boring ways. The failures were boring software bugs in the *plumbing* — a comment closing too early, a context window blending, a system call returning before its work was done, a kernel auth flow looping.
-- The failures cost time when they happened. Net for the year still positive — but anyone running this stack should expect to spend ~2-5% of their time on plumbing maintenance.
+## The restart that raced itself
 
-## The worry: "is this all worth it?"
+When I update the runtime everything runs on, the updater has to restart a background service. The obvious way to do that is: stop it, then start it. So that's what it did .. issue the stop, then issue the start.
 
-- Honest answer: yes, but only if you genuinely have a long tail of operational work that's costing you attention. If your inbox is already manageable and your infrastructure is one server, agents are a fun toy and you don't need them.
-- For a 1.5-person team running multiple product lines, multiple inboxes, more than a hundred GitHub repos, and a handful of physical locations? The agents have given me back hours per week and surfaced opportunities that would have otherwise been lost.
+The catch is that the stop command came back and reported success before the service had actually finished shutting down. So the start command arrived to find the old one still technically there, refused, and threw an error. The safety logic saw the failed restart and rolled the whole update back, leaving everything on the old version .. a failure caused entirely by the *recovery* being faster than the thing it was recovering from.
 
-## Receipts to pull (week-of)
+The fix was to stop composing two commands that don't know about each other, and use the single one the system provides for "restart this cleanly," which does both halves atomically. The lesson is almost embarrassingly old-fashioned: read the manual. These system tools have sharp edges in exactly the spots where you'd assume two obvious commands compose into one obvious result. They don't always. Inferring how the plumbing behaves is how you end up debugging a race at midnight.
 
-- Specific commit SHAs for the JSDoc fix (e38982b on cortex repo)
-- Specific commit for the prompt fix (the email_watcher.mjs draftReply update)
-- Cortex-down timeline for the JSDoc incident (start time, detection time, fix time)
-- Watchdog script (`ops/opendirectoryd_watchdog.sh`)
+## What all of these have in common
 
-## Closing
+Read them back to back and the pattern is almost funny: not one of them was the AI failing.
 
-- The series wraps. Sketch what's next: more agents (TripDeck, finance reconciliation deeper), open-sourcing parts of the stack (Cortex schema, runbook structure)
-- Reader call-to-action: "if you're considering building something like this, pick *one* high-pain manual loop in your week and replace it. Don't try to build my whole stack. Start small."
-- Final Discord/Newsletter close
-- Possibly: "thanks for reading — the next series will probably be about [seed something — building the hardware side, badge design process, etc.]"
+The models did their boring jobs correctly. What broke was the plumbing around them .. a comment that closed too early, a context window that blended two conversations, a system call that returned before its work was done, an authentication flow stuck in a loop. These are the failure modes of ordinary software, and they're the ones you'll actually spend your time on. Plan for it. Running a stack like this isn't free maintenance .. budget something like a few percent of your week for keeping the pipes clear. The year still came out well ahead. But it came out ahead *because* I treated the plumbing as the real job, not because the agents never tripped.
+
+## "Is all of this actually worth it?"
+
+The honest answer is: yes, but only if you genuinely have the problem it solves.
+
+If your inbox is already manageable and your whole world is one tidy server, then agents are a fun toy and you do not need a fleet of them. I'd have talked myself out of all of it. But for a one-and-a-half-person operation running multiple product lines, several inboxes, more than a hundred code repositories, and a handful of physical places that all need watching .. the agents have handed me back hours every week, and surfaced things I'd otherwise have missed entirely. The math only works because the pile of manual work was real and growing. Match the tool to a real, heavy problem, and it pays. Build it because it's cool, and you've just hired seven things that can break.
+
+## Where to start, if you're tempted
+
+So that's the series. Six posts on running a small business with a team of agents .. the inbox watcher, the board they share, the dashboard that watches them, the architecture that holds it up, and now the parts that broke.
+
+If you take one thing from all of it, let it be this: don't try to build my whole stack. Pick *one* high-pain manual loop in your week .. the thing you dread, the thing that eats an hour every few days .. and replace just that. Get it working. Live with it. Let the second one suggest itself. Every piece in this series started as one annoying chore I got tired of doing, and nothing was built before its problem was real.
+
+That's also why I'm not sure this is the last series. The next one might not be about agents at all .. it might be about the thing the agents exist to support in the first place: actually designing and building the badges. We'll see.
+
+If you want it when it lands, the [BadgePirates newsletter][3] is how I announce these .. monthly, with the new writing and whatever we're shipping. The [Discord][2] is where the running commentary lives in between. Thanks for reading.
+
+— Kevin
+
+[2]: https://discord.gg/BfsYbHY8m7
+[3]: https://badgepirates.com
