@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 3 — Nexus, the project board we built for robots"
 date: 2026-06-22
-publish_on: 2026-06-22
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
