@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 4 — Cortex, what seven agents look like when they're working"
 date: 2026-07-06
-publish_on: 2026-07-06
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
