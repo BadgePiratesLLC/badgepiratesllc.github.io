@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 5 — Architecture is product"
 date: 2026-07-20
-publish_on: 2026-07-20
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
