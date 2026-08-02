@@ -93,7 +93,15 @@ That's the part I'd point a nervous person to. Not that the agents never get it 
 
 The honest answer is: yes, but only if you genuinely have the problem it solves.
 
-If your inbox is already manageable and your whole world is one tidy server, then agents are a fun toy and you do not need a fleet of them. I'd have talked myself out of all of it. But for a one-and-a-half-person operation running multiple product lines, several inboxes, more than a hundred code repositories, and a handful of physical places that all need watching .. the agents have handed me back hours every week, and surfaced things I'd otherwise have missed entirely. The math only works because the pile of manual work was real and growing. Match the tool to a real, heavy problem, and it pays. Build it because it's cool, and you've just hired eight things that can break .. it was seven when I started writing this series, which tells you something about how these things grow.
+If your inbox is already manageable and your whole world is one tidy server, then agents are a fun toy and you do not need a fleet of them. I'd have talked myself out of all of it. But for a one-and-a-half-person operation running multiple product lines, several inboxes, more than a hundred code repositories, and a handful of physical places that all need watching .. the agents have handed me back hours every week, and surfaced things I'd otherwise have missed entirely. The math only works because the pile of manual work was real and growing. Match the tool to a real, heavy problem, and it pays. Build it because it's cool, and you've just hired eight things that can break.
+
+Eight, and it was seven when I started writing this series. The eighth is the one worth explaining, because I didn't see it coming and it's the closest thing to a real lesson in this whole section.
+
+Seven agents doing genuine work quietly created a new job, and the new job was mine. Everything they finished came back to me to be read, checked and signed off. Individually those are two-minute decisions. Collectively they became the thing I did in the evenings, and the queue grew faster than the time I had for it. I had automated the work and accidentally promoted myself into approvals.
+
+So the eighth agent is a stand-in for me. It picks up the routine, reversible, checkable work, confirms it genuinely did what it claimed, closes it out .. and comes to find me only for the things that actually need a person: anything that goes out in public, anything that spends money, anything it can't verify for itself. It is deliberately timid. It leaves anything it's unsure about alone.
+
+I automated the reviewing of the automation. Written down that sounds absurd, and I'd have laughed at it a year ago. But past a certain size the bottleneck stops being the work and becomes the approving .. and if you don't notice that shift, you quietly become the slowest part of your own machine.
 
 ## Where to start, if you're tempted
 
