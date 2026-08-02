@@ -27,13 +27,19 @@ The trouble is it pulled in *too much* history. Tangled into the older context w
 
 I caught it before it sent, but only because the names were so obviously wrong they jumped off the screen. That's not a safety net. That's luck. The real fix was structural: rewrite the agent's instructions so the latest message is the one and only reply target, the rest of the thread is *context to understand and nothing more*, and addressing anyone named in an older message is forbidden outright. The lesson is one of the most useful things this whole project has taught me about working with these models: they blend context that a human would instinctively keep in separate boxes. You don't fix that by hoping for a smarter model. You fix it by building the boxes yourself, in the instructions.
 
-## The CPU loop I still haven't beaten
+## The CPU loop that only broke when I left
 
-Not every story in here has a clean ending. This one doesn't.
+I wrote most of this post with this section titled "the one I still haven't beaten." It sat unsolved for weeks. Then I went on holiday, and it explained itself.
 
-One of my machines has a system process .. part of how macOS handles logins and credentials .. that periodically pins the processor at full tilt and drags a couple of related processes down with it. Politely asking it to reload does nothing. Killing it works for a few minutes, and then whatever sets it off sets it off again, and it climbs right back. The honest truth is I still haven't fully nailed the root cause. Something is failing an authentication check in a tight loop, and the machine is grinding itself trying to service it.
+One of my machines would periodically pin its processor at full tilt and drag a couple of related processes down with it. Asking the offending process to reload politely did nothing. Killing it bought a few minutes, and then it climbed right back. For a while all I had was a watchdog .. a small script that killed the runaway whenever it crossed a line, buying the machine back its breathing room. A band-aid, and I knew it.
 
-What I have, for now, is a watchdog .. a small script that watches the runaway process and kills it whenever it crosses a line, buying the machine back its breathing room. That is a band-aid and I know it's a band-aid. But it's an honest one, and it points at a real lesson: not every loud problem has a clean root cause waiting to be found this week. Sometimes the responsible move is to automate the recovery so the thing stays usable, write down that the real fix is still open, and keep digging when you can. Pretending it's solved would be the actual failure.
+What I had missed is that it never happened while I was sitting at the machine. That is not a coincidence, it's the entire clue, and I looked straight past it for weeks because I was only ever there to see the aftermath.
+
+The agents sign in to do their work. One of them was still using the kind of login that quietly expires .. the sort that refreshes itself every time you sit down at the computer, which meant that as long as I was around, it was silently topped up and everything looked fine. The moment I was gone for more than a day, nothing renewed it. The agent woke up, tried to authenticate, failed, and tried again .. immediately, and forever. That tight retry was the runaway. The machine was grinding itself trying to service a login that could no longer succeed, at precisely the time I was least able to notice.
+
+The fix was mundane once I could see it: give the agents a credential with a long life of its own, one that does not depend on me showing up to renew it. The band-aid came out with it, and the watchdog that used to kill the runaway now just reports when something has been running too long.
+
+There are two lessons and I value the second one more. The first is that a band-aid is a legitimate move .. it kept the machine usable for weeks while the real answer stayed hidden. The second is the one I'll actually carry: *when* something breaks is evidence, exactly as much as *what* broke. This thing only failed when I wasn't there. I treated that as background noise for a month, when it was the answer written in plain sight. Any system that only misbehaves while you're away is telling you it depends on you being there .. which is the one thing an automation is supposed to fix.
 
 ## The restart that raced itself
 
@@ -63,7 +69,7 @@ The repair took a day. The lesson is one I apparently need to keep relearning: a
 
 Read them back to back and the pattern is almost funny: not one of them was the AI failing.
 
-The models did their boring jobs correctly. What broke was the plumbing around them .. a comment that closed too early, a context window that blended two conversations, a system call that returned before its work was done, an authentication flow stuck in a loop, a pipeline that mistook an empty folder for a finished job. These are the failure modes of ordinary software, and they're the ones you'll actually spend your time on. Plan for it. Running a stack like this isn't free maintenance .. budget something like a few percent of your week for keeping the pipes clear. The year still came out well ahead. But it came out ahead *because* I treated the plumbing as the real job, not because the agents never tripped.
+The models did their boring jobs correctly. What broke was the plumbing around them .. a comment that closed too early, a context window that blended two conversations, a system call that returned before its work was done, a login that expired the moment I stopped showing up to renew it, a pipeline that mistook an empty folder for a finished job. These are the failure modes of ordinary software, and they're the ones you'll actually spend your time on. Plan for it. Running a stack like this isn't free maintenance .. budget something like a few percent of your week for keeping the pipes clear. The year still came out well ahead. But it came out ahead *because* I treated the plumbing as the real job, not because the agents never tripped.
 
 ## In the AI's own words
 
@@ -87,7 +93,7 @@ That's the part I'd point a nervous person to. Not that the agents never get it 
 
 The honest answer is: yes, but only if you genuinely have the problem it solves.
 
-If your inbox is already manageable and your whole world is one tidy server, then agents are a fun toy and you do not need a fleet of them. I'd have talked myself out of all of it. But for a one-and-a-half-person operation running multiple product lines, several inboxes, more than a hundred code repositories, and a handful of physical places that all need watching .. the agents have handed me back hours every week, and surfaced things I'd otherwise have missed entirely. The math only works because the pile of manual work was real and growing. Match the tool to a real, heavy problem, and it pays. Build it because it's cool, and you've just hired seven things that can break.
+If your inbox is already manageable and your whole world is one tidy server, then agents are a fun toy and you do not need a fleet of them. I'd have talked myself out of all of it. But for a one-and-a-half-person operation running multiple product lines, several inboxes, more than a hundred code repositories, and a handful of physical places that all need watching .. the agents have handed me back hours every week, and surfaced things I'd otherwise have missed entirely. The math only works because the pile of manual work was real and growing. Match the tool to a real, heavy problem, and it pays. Build it because it's cool, and you've just hired eight things that can break .. it was seven when I started writing this series, which tells you something about how these things grow.
 
 ## Where to start, if you're tempted
 
