@@ -43,11 +43,27 @@ The catch is that the stop command came back and reported success before the ser
 
 The fix was to stop composing two commands that don't know about each other, and use the single one the system provides for "restart this cleanly," which does both halves atomically. The lesson is almost embarrassingly old-fashioned: read the manual. These system tools have sharp edges in exactly the spots where you'd assume two obvious commands compose into one obvious result. They don't always. Inferring how the plumbing behaves is how you end up debugging a race at midnight.
 
+## The update channel that shipped nothing for eight months
+
+The badges we build can update themselves over wifi. Power one on, it phones home, and if there's newer firmware waiting it pulls it down and installs it. That machinery has been in place for the better part of a year, and every automated check on it came back green the whole time.
+
+It had not shipped a single update since early December.
+
+I found it by accident, while chasing something else entirely. What I expected was one broken step. What I found was four .. stacked one behind the other, each independently capable of causing this, and every one of them reporting success while doing nothing at all.
+
+The script that stamps the version number was looking for it in a file it had been moved out of months earlier, during a tidy-up. It didn't find it. It said so, in its output .. and then finished as though everything were fine, so nothing downstream ever noticed. The step meant to upload the finished firmware went looking for the build in a folder that is deliberately never saved to the repository, found empty space where the files should have been, decided there was nothing to do, and went green. The credentials it would have needed to upload anything had never been added to that project in the first place. And the badges themselves, when they asked "is there something newer?", were comparing two version numbers written in two different formats .. which meant they would have said yes to almost anything, including firmware built for a different product line.
+
+That last one is the part that holds my attention. The failure wasn't only "no updates went out." If I'd found and fixed any one of the first three on its own, the fourth was sitting there waiting to push test firmware onto badges that were never meant to receive it. Fixing three quarters of this would have been worse than leaving it broken.
+
+Every layer failed *open*. Not one of them errored, went red, or told anybody .. each looked at an empty result and concluded its work was done. Eight months of a green check mark, because I had built the checks to confirm the process ran, and never once that it produced anything.
+
+The repair took a day. The lesson is one I apparently need to keep relearning: a green check mark tells you a process finished, not that it did its job. The pipeline now refuses to publish a release it cannot verify .. and when I want to know whether something actually shipped, I go look at the destination, not at the report.
+
 ## What all of these have in common
 
 Read them back to back and the pattern is almost funny: not one of them was the AI failing.
 
-The models did their boring jobs correctly. What broke was the plumbing around them .. a comment that closed too early, a context window that blended two conversations, a system call that returned before its work was done, an authentication flow stuck in a loop. These are the failure modes of ordinary software, and they're the ones you'll actually spend your time on. Plan for it. Running a stack like this isn't free maintenance .. budget something like a few percent of your week for keeping the pipes clear. The year still came out well ahead. But it came out ahead *because* I treated the plumbing as the real job, not because the agents never tripped.
+The models did their boring jobs correctly. What broke was the plumbing around them .. a comment that closed too early, a context window that blended two conversations, a system call that returned before its work was done, an authentication flow stuck in a loop, a pipeline that mistook an empty folder for a finished job. These are the failure modes of ordinary software, and they're the ones you'll actually spend your time on. Plan for it. Running a stack like this isn't free maintenance .. budget something like a few percent of your week for keeping the pipes clear. The year still came out well ahead. But it came out ahead *because* I treated the plumbing as the real job, not because the agents never tripped.
 
 ## In the AI's own words
 
