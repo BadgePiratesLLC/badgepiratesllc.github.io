@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 6 — What I got wrong"
 date: 2026-08-03
-publish_on: 2026-08-03
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
