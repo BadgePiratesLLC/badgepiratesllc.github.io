@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 7 — The right model for the right job"
 date: 2026-08-17
-publish_on: 2026-08-17
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
