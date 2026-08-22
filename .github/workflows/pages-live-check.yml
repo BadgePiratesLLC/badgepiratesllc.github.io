@@ -1,0 +1,41 @@
+name: pages-live-check
+# AC1 of Nexus 5615468f: alert when the newest published post (or the Pages
+# build behind it) isn't actually reachable on the live domain. Runs on its
+# own schedule, independent of auto-publish, because the 2026-08-03 EP6 day
+# showed a Pages build going "built" then "errored" with no promote event to
+# blame — recurring platform flakiness, not just a publish-day risk.
+on:
+  schedule:
+    - cron: '15 */6 * * *'   # every 6h, offset from auto-publish's :00
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find newest already-published post
+        id: latest
+        run: |
+          today=$(date -u +%F)
+          f=$(ls _posts/*.md | sort | awk -F/ -v t="$today" '{d=$2; sub(/-[^-]*-[^-]*-.*$/,"",d); if (d<=t) latest=$0} END{print latest}')
+          slug=$(basename "$f" .md | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//')
+          echo "file=$f" >> "$GITHUB_OUTPUT"
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+      - name: Check live URL and blog index for the newest post (AC3 — end-to-end, not workflow-exit-code)
+        run: |
+          url="https://blog.badgepirates.com/${{ steps.latest.outputs.slug }}/"
+          echo "checking: $url"
+          code=$(curl -s -o /dev/null -w '%{http_code}' -L "$url")
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::${{ steps.latest.outputs.file }} exists in the repo but ${url} returned HTTP ${code} — the Pages deploy did not actually ship it."
+            exit 1
+          fi
+          idx=$(curl -s -L "https://blog.badgepirates.com/")
+          echo "$idx" | grep -qF "${{ steps.latest.outputs.slug }}" || {
+            echo "::error::${url} returns 200 but the newest post is not linked from the blog index — partial/stale build."
+            exit 1
+          }
+          echo "confirmed: ${{ steps.latest.outputs.file }} is live and indexed at ${url}"
