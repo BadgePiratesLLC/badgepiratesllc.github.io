@@ -2,7 +2,6 @@
 layout: post
 title: "Episode 8 — The toolbox"
 date: 2026-08-31
-publish_on: 2026-08-31
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
