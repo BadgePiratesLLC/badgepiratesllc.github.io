@@ -6,15 +6,6 @@ categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
 
-<!-- REVIEW COPY — sources inline, stripped before publish_on is set.
-     [S1] runbooks/email/badgepirates-newsletter.md:3,15,196 (migration date 2026-05-19, DKIM verified 2026-05-18, historical import 2026-05-20)
-     [S2] skills/newsletter/SKILL.md "Gotchas" section (2026-06-08 cutover repair, 535 SES SMTP auth failure, "finished" != delivered)
-     [S3] runbooks/security/listmonk-subscription-abuse-hardening.md (383 quarantined unconfirmed, AC3 detection, AC6 quarantine-not-purge)
-     [S4] skills/newsletter/SKILL.md "To move/cancel later" section (Nexus 78713bee — campaign sat scheduled ~20h after three agents wrote "draft", nobody re-checked the live API)
-     [S5] live Listmonk API check, 2026-09-21: list 3 confirmed=15, unconfirmed=114, total=129
-     NOTE for Kevin: I could not independently verify the specific "4-minute wrong cancel" detail from Nexus 78713bee — that ticket is archived and outside what my Nexus access can pull. I used only the documented ~20-hour armed-scheduled incident from the newsletter skill file instead. If you want the 4-minute detail in, I need the ticket text to cite it accurately.
--->
-
 Mailchimp told us in May they were killing rich HTML on the free tier. Not a warning shot .. an email that showed up in the same batch as that month's newsletter, saying the format we'd used for six issues wasn't going to render right anymore unless we paid up.
 
 I didn't want to pay Mailchimp to keep doing something we could run ourselves. So we didn't. Thirteen days later the newsletter was running on our own list server, over our own mail, and Mailchimp was off.
