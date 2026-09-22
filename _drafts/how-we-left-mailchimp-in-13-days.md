@@ -31,7 +31,7 @@ The June send looked normal. Campaign said "finished." Nobody checked further, b
 
 It wasn't. The outbound mail credential was bad, and every single message in that send failed with an authentication error at the mail server. "Finished" in this system means every message was *attempted*, not that any of them arrived. That distinction cost us a full newsletter cycle before anyone noticed the mail simply never left the building. Fixed by 2026-06-08, and after that I stopped trusting a green status on its own .. now the check is "did mail actually leave," not "did the job report success."
 
-## The worry:
+## The worry
 
 Once I stood up a public "join the newsletter" form again, it stopped being a mailing list and started being a target. By August the list had grown to hundreds of signups, and the overwhelming majority of them weren't people. They were scripted, from a form endpoint that never asked for a captcha in the first place, and by the time it was caught the quarantined pile was in the high hundreds .. sitting unconfirmed, not deleted, because purging first and asking questions later is how you also delete the humans mixed in with the bots.
 
