@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How we left Mailchimp in 13 days"
-publish_target: 2026-09-28
+publish_on: 2026-10-02
 categories: [ai-agents, behind-the-scenes]
 author: Kevin Bennett
 ---
