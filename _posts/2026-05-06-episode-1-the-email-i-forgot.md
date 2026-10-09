@@ -84,6 +84,6 @@ If you want the next one when it lands, the [BadgePirates newsletter][3] is the 
 
 — Kevin
 
-[1]: /2025/06/21/BadgePirates_And_Our_AI_Overloards.html
+[1]: /BadgePirates_And_Our_AI_Overloards/
 [2]: https://discord.gg/BfsYbHY8m7
 [3]: https://badgepirates.com
