@@ -77,7 +77,7 @@ Once your badge reboots with the latest firmware, you're good to go. Show it off
 ---
 
 **Got questions? Need help? Or want to suggest a feature?**  
-Drop us a line on [Discord](https://discord.gg/yHsTmz6H)  
+Drop us a line on [Discord](https://discord.gg/BfsYbHY8m7)  
 or hit us up at `admin@badgepirates.com`.
 
 **Better yet.. track us down at Hacker Summer Camp this summer and say hi in person.**
