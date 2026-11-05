@@ -14,15 +14,18 @@ CC15's board file carries a settings table, one line per rule, that says how ser
 
 Nobody did that on purpose. It was a side effect of the migration, and since then every "DRC clean" result on this board was clean because the check had stopped looking, not because the board was actually clean. We only found it by diffing CC15's settings against the sibling LoRa-Satellite-v2 board file, which still had the real KiCad defaults. Fixed in commit 81b7c56, settings-only, zero copper touched.
 
-## What was actually hiding under there: 70 errors, 144 warnings
+## What was actually hiding under there: 70 errors, 148 warnings
 
-Once the severities were restored, DRC found 70 errors and 144 warnings that had been there the whole time. That's a big number to see appear out of nowhere, so instead of either panicking or shrugging it off, we traced every one of the 70 errors back to the specific part pair causing it, rather than treating the count as one scary blob.
+Once the severities were restored, DRC found 70 errors and 148 warnings that had been there the whole time. That's a big number to see appear out of nowhere, so instead of either panicking or shrugging it off, we traced every one of the 70 errors back to the specific part causing it, rather than treating the count as one scary blob.
 
-Here's where they actually came from:
-- 58 of the 69 solder-mask-bridge errors are pad-to-pad on four components' own footprints (a resistor array, two chips, a microSD socket) .. baked into those library parts, not caused by anything routed near them.
-- 11 more are inside the USB-C connector's own footprint, same story.
-- The 1 starved-thermal error is on a header that doesn't even get populated on this board.
-- Zero of the 70 are something I routed or placed. All of them trace to five known footprint definitions.
+The 70 errors break down as 69 solder-mask-bridge violations plus 1 starved-thermal error. Every one of the 69 solder-mask-bridge hits is pad-to-pad inside a single component's own footprint .. none of them are two parts routed too close together. By component:
+- U2 (the ESP32-S3) .. 37
+- J4 (the USB-C connector) .. 22
+- U3 (battery-monitor chip) .. 5
+- RN1 (a resistor array) and U4 (charger chip) .. 2 each
+- J5 (microSD socket) .. 1
+
+That's five known footprint definitions, with U2's own footprint accounting for over half the count on its own. The 1 starved-thermal error is on a header that doesn't even get populated on this board. Zero of the 70 are something I routed or placed.
 
 That's the difference between "this board has 70 real defects" and "five footprint files in our shared library need fixing, and none of it is new copper risk." Still true that it needs fixing, just not true that CC15 specifically broke something this week.
 
