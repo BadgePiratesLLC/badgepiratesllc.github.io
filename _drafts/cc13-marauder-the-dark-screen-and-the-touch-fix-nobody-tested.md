@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The CC13 Marauder: a dark screen, a 180-degree panel, and the touch fix nobody tested"
-publish_target: 2026-10-13
+publish_target: 2026-11-10
 categories: [hardware, badges]
 author: Kevin Bennett
 ---
@@ -22,13 +22,13 @@ The same commit said it mirrored the touch calibration to match the new orientat
 
 Nobody caught it in review, because there was nothing to catch by reading it. The comment said the touch was mirrored. The diff had different numbers in it. Both of those things looked like progress.
 
-The only thing that would have caught it is a finger on the glass. When we flashed it to a real board .. GAMINGCRAP, COM3, esptool confirming `Hash of data verified` on the write .. I tapped the screen and watched the touch land somewhere else entirely. Took about five seconds to find.
+The only thing that would have caught it is a finger on the glass. When we flashed it to a real board .. esptool confirming `Hash of data verified` on the write .. I tapped the screen and watched the touch land somewhere else entirely. Took about five seconds to find.
 
 Commit `6ed979c` reverses both axes properly, onto the same calibration values already proven on CC14. Screen right-side up, touch lands where you press it.
 
 ## The lesson isn't really about badges
 
-A comment saying a thing was done is not the thing being done. That's true of code review generally, but it's especially true of hardware, where the only test that actually settles the question is a human touching the object. We had two commits, a passing build, and a schematic trace that were all consistent with "fixed" — and none of them were the thing that proved it.
+A comment saying a thing was done is not the thing being done. That's true of code review generally, but it's especially true of hardware, where the only test that actually settles the question is a human touching the object. We had two commits, a passing build, and a schematic trace that were all consistent with "fixed" .. and none of them were the thing that proved it.
 
 150 units get a second life out of this. The badge is also getting rebuilt touch-first, so navigating it stops feeling like turning a knob through a menu that was designed for a rotary encoder. If that lands before this posts, we'll have a before-and-after screenshot instead of just a description, and it's worth the wait.
 
