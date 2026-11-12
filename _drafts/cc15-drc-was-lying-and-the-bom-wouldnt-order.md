@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CC15: the DRC check said clean for three months. It wasn't checking."
-publish_target: 2026-11-12
+publish_target: 2026-11-16
 categories: [hardware, badges, cc15]
 author: Kevin Bennett
 ---
