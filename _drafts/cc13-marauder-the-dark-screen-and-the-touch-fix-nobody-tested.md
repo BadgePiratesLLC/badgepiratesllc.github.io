@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "The CC13 Marauder: a dark screen, a 180-degree panel, and the touch fix nobody tested"
-publish_target: 2026-11-10
+# PARKED: Kevin ruled 2026-11-07 this must not publish - "we cant post CC13 muarader code.. it does not work."
+# See Nexus e903d778 (ruling) / 82816feb (gate closed as duplicate). Re-add publish_target only if firmware work (b5a17dba) gets a go.
 categories: [hardware, badges]
 author: Kevin Bennett
 ---
